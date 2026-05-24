@@ -15,7 +15,7 @@ module.exports = {
     max: 50 // 50 sessions per IP per 15 minutes
   },
   cors: {
-    origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+    origin: process.env.CORS_ORIGIN || (process.env.NODE_ENV === 'production' ? true : 'http://localhost:5173'),
     credentials: true
   },
   questions: {
