@@ -1,0 +1,70 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+.error-banner {
+  background: #fee;
+  border: 2px solid #fcc;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.error-icon {
+  font-size: 1.5em;
+}
+
+.error-message {
+  color: #c33;
+  font-weight: 500;
+}
+
+.app-footer {
+  margin-top: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 15px;
+  }
+
+  .app-footer {
+    margin-top: 30px;
+    font-size: 0.8em;
+  }
+}
+
+/* Made with Bob */

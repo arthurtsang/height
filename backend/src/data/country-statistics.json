@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-05-24",
+  "description": "Statistical data for nationality inference and height prediction",
+  "sources": {
+    "heights": "WHO Global Health Observatory, NCD Risk Factor Collaboration, National Health Agencies",
+    "food": "Google Trends, World Food Atlas, Cultural Surveys",
+    "sports": "International Sports Federations, Olympic Data",
+    "transport": "OECD Transport Statistics, World Bank",
+    "lifestyle": "OECD Better Life Index, National Census Data"
+  },
+  "countries": [
+    {
+      "code": "US",
+      "name": "United States",
+      "avgHeight": {
+        "male": 175.3,
+        "female": 161.5,
+        "overall": 168.4,
+        "source": "CDC NHANES 2015-2018"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pizza": 0.28,
+          "burgers": 0.24,
+          "tacos": 0.15,
+          "pasta": 0.12,
+          "sushi": 0.08,
+          "curry": 0.05,
+          "noodles": 0.04,
+          "other": 0.04
+        },
+        "favoriteSports": {
+          "football": 0.37,
+          "basketball": 0.25,
+          "baseball": 0.18,
+          "soccer": 0.1,
+          "hockey": 0.05,
+          "other": 0.05
+        },
+        "climatePreference": {
+          "moderate": 0.4,
+          "warm": 0.35,
+          "cold": 0.25
+        },
+        "beveragePreferences": {
+          "coffee": 0.65,
+          "tea": 0.2,
+          "soda": 0.1,
+          "juice": 0.05
+        },
+        "primaryTransport": {
+          "car": 0.85,
+          "publicTransit": 0.08,
+          "bike": 0.04,
+          "walk": 0.03
+        },
+        "workStyle": {
+          "office": 0.45,
+          "hybrid": 0.35,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "house": 0.62,
+          "apartment": 0.3,
+          "condo": 0.06,
+          "other": 0.02
+        }
+      }
+    }
+  ]
+}

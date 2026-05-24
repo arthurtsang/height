@@ -1,0 +1,83 @@
+.welcome-screen {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  animation: slideIn 0.5s ease-out;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header .emoji {
+  font-size: 4em;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  color: #667eea;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.welcome-screen h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.features {
+  text-align: left;
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.features ul {
+  list-style: none;
+}
+
+.features li {
+  margin: 10px 0;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 50px;
+  font-size: 1.3em;
+  border-radius: 50px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 20px;
+}
+
+.start-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+@media (max-width: 600px) {
+  .welcome-screen {
+    padding: 25px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .welcome-screen h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* Made with Bob */
