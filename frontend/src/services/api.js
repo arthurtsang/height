@@ -1,6 +1,23 @@
-// Use relative URL in production (same domain), localhost in development
-const API_BASE_URL = import.meta.env.VITE_API_URL ||
-  (import.meta.env.PROD ? '' : 'http://localhost:3000');
+// Determine API base URL based on environment
+const getApiBaseUrl = () => {
+  // If explicitly set via environment variable, use it
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  
+  // In production, use relative URLs (same domain)
+  if (import.meta.env.PROD) {
+    return '';
+  }
+  
+  // In development, use localhost
+  return 'http://localhost:3000';
+};
+
+const API_BASE_URL = getApiBaseUrl();
+
+// Log for debugging (remove in production)
+console.log('API Base URL:', API_BASE_URL || 'relative (same domain)');
 
 class ApiService {
   async startSession() {
