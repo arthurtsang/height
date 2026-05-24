@@ -21,6 +21,20 @@ module.exports = {
   questions: {
     totalPerSession: 10,
     minCulturalQuestions: 3 // First 3 questions should be cultural
+  },
+  adaptive: {
+    // Phase 1: Nationality identification
+    maxNationalityQuestions: 15,
+    nationalityConfidenceThreshold: 0.90,
+    
+    // Phase 2: Height determination
+    maxHeightQuestions: 12,
+    heightConfidenceThreshold: 0.85,
+    
+    // Question selection weights
+    informationGainWeight: 0.6,
+    categoryDiversityWeight: 0.2,
+    recencyPenaltyWeight: 0.2
   }
 };
 

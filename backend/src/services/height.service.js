@@ -2,7 +2,41 @@ const logger = require('../utils/logger');
 
 class HeightService {
   /**
-   * Calculate height based on user answers
+   * Calculate final height using base height and adjustments
+   * @param {number} baseHeight - Base height from country average
+   * @param {number} heightAdjustment - Total height adjustment from answers
+   * @param {object} categoryProbs - Category probabilities
+   * @returns {number} Predicted height in centimeters
+   */
+  calculateFinalHeight(baseHeight, heightAdjustment, categoryProbs) {
+    try {
+      // Add small random factor for variety (±2cm)
+      const randomFactor = Math.random() * 4 - 2;
+      
+      // Calculate final height
+      let finalHeight = baseHeight + heightAdjustment + randomFactor;
+      
+      // Clamp to reasonable range (147cm to 208cm / 4'10" to 6'10")
+      finalHeight = Math.max(147, Math.min(208, finalHeight));
+      
+      const roundedHeight = Math.round(finalHeight);
+      
+      logger.info('Final height calculated', {
+        baseHeight,
+        heightAdjustment,
+        randomFactor: randomFactor.toFixed(2),
+        finalHeight: roundedHeight
+      });
+      
+      return roundedHeight;
+    } catch (error) {
+      logger.error('Error calculating final height', { error: error.message });
+      throw error;
+    }
+  }
+
+  /**
+   * Calculate height based on user answers (legacy method for backward compatibility)
    * @param {Array} answers - Array of answer objects with questionId and score/baseHeight
    * @returns {number} Predicted height in centimeters
    */

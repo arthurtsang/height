@@ -1,0 +1,576 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "2026-05-24",
+  "description": "Enhanced question bank with country weights for nationality inference and height adjustments for relative height determination",
+  "metadata": {
+    "totalQuestions": 80,
+    "nationalityQuestions": 50,
+    "heightRelativeQuestions": 30,
+    "categories": {
+      "nationality": ["food_preference", "sports_preference", "climate_preference", "beverage_preference", "transport_preference", "work_style", "housing_preference", "lifestyle"],
+      "height_relative": ["physical_comfort", "social_situations", "shopping_experience", "vehicle_fit", "furniture_fit", "daily_activities"]
+    }
+  },
+  "questions": [
+    {
+      "id": "q_food_comfort_001",
+      "phase": "nationality",
+      "category": "food_preference",
+      "text": "What's your go-to comfort food when you're feeling down?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🍕 Pizza",
+          "countryWeights": {"US": 0.28, "IT": 0.35, "GB": 0.20, "CA": 0.25, "AU": 0.25, "DE": 0.22, "FR": 0.22, "ES": 0.22, "BR": 0.20, "MX": 0.12, "JP": 0.05, "CN": 0.03, "IN": 0.03, "KR": 0.06, "NL": 0.20, "DK": 0.25, "NO": 0.25, "SE": 0.25, "TH": 0.03, "AR": 0.25}
+        },
+        {
+          "id": "opt2",
+          "text": "🍜 Noodles or ramen",
+          "countryWeights": {"JP": 0.35, "CN": 0.40, "KR": 0.30, "TH": 0.40, "US": 0.04, "IT": 0.04, "GB": 0.08, "CA": 0.05, "AU": 0.06, "DE": 0.08, "FR": 0.06, "ES": 0.05, "BR": 0.05, "MX": 0.03, "IN": 0.02, "NL": 0.06, "DK": 0.05, "NO": 0.05, "SE": 0.05, "AR": 0.03}
+        },
+        {
+          "id": "opt3",
+          "text": "🌮 Tacos or burritos",
+          "countryWeights": {"MX": 0.45, "US": 0.15, "ES": 0.08, "CA": 0.12, "AU": 0.06, "GB": 0.04, "BR": 0.06, "AR": 0.04, "IT": 0.02, "FR": 0.03, "DE": 0.04, "JP": 0.02, "CN": 0.01, "IN": 0.01, "KR": 0.02, "NL": 0.03, "DK": 0.03, "NO": 0.03, "SE": 0.03, "TH": 0.01}
+        },
+        {
+          "id": "opt4",
+          "text": "🍛 Curry",
+          "countryWeights": {"IN": 0.50, "GB": 0.22, "JP": 0.08, "TH": 0.15, "US": 0.05, "CA": 0.08, "AU": 0.10, "DE": 0.10, "FR": 0.06, "ES": 0.05, "IT": 0.03, "NL": 0.06, "DK": 0.06, "NO": 0.06, "SE": 0.06, "BR": 0.04, "MX": 0.02, "CN": 0.03, "KR": 0.04, "AR": 0.03}
+        },
+        {
+          "id": "opt5",
+          "text": "🍔 Burgers",
+          "countryWeights": {"US": 0.24, "CA": 0.22, "AU": 0.22, "GB": 0.15, "DE": 0.18, "NL": 0.15, "BR": 0.15, "MX": 0.15, "FR": 0.12, "ES": 0.08, "IT": 0.06, "JP": 0.04, "CN": 0.02, "IN": 0.02, "KR": 0.04, "DK": 0.18, "NO": 0.18, "SE": 0.18, "TH": 0.02, "AR": 0.06}
+        }
+      ],
+      "precomputedIG": 0.92
+    },
+    {
+      "id": "q_sports_favorite_001",
+      "phase": "nationality",
+      "category": "sports_preference",
+      "text": "Which sport do you enjoy watching the most?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "⚽ Soccer/Football",
+          "countryWeights": {"ES": 0.65, "IT": 0.60, "BR": 0.75, "MX": 0.70, "AR": 0.75, "GB": 0.45, "FR": 0.45, "DE": 0.55, "NL": 0.50, "DK": 0.45, "NO": 0.35, "SE": 0.40, "JP": 0.25, "KR": 0.35, "TH": 0.40, "CN": 0.15, "IN": 0.15, "US": 0.10, "CA": 0.20, "AU": 0.20}
+        },
+        {
+          "id": "opt2",
+          "text": "🏀 Basketball",
+          "countryWeights": {"US": 0.25, "CA": 0.15, "ES": 0.15, "CN": 0.25, "JP": 0.10, "KR": 0.15, "IT": 0.10, "FR": 0.10, "DE": 0.10, "GB": 0.05, "AU": 0.08, "BR": 0.06, "MX": 0.05, "AR": 0.06, "NL": 0.05, "DK": 0.05, "NO": 0.05, "SE": 0.05, "TH": 0.06, "IN": 0.03}
+        },
+        {
+          "id": "opt3",
+          "text": "🏈 American Football",
+          "countryWeights": {"US": 0.37, "CA": 0.12, "GB": 0.02, "AU": 0.02, "MX": 0.03, "DE": 0.02, "FR": 0.02, "IT": 0.01, "ES": 0.01, "BR": 0.01, "AR": 0.01, "JP": 0.02, "CN": 0.01, "IN": 0.01, "KR": 0.01, "NL": 0.02, "DK": 0.01, "NO": 0.01, "SE": 0.01, "TH": 0.01}
+        },
+        {
+          "id": "opt4",
+          "text": "🏏 Cricket",
+          "countryWeights": {"IN": 0.60, "GB": 0.18, "AU": 0.30, "US": 0.01, "CA": 0.02, "JP": 0.01, "CN": 0.01, "KR": 0.01, "DE": 0.01, "FR": 0.01, "IT": 0.01, "ES": 0.01, "BR": 0.01, "MX": 0.01, "AR": 0.01, "NL": 0.01, "DK": 0.01, "NO": 0.01, "SE": 0.01, "TH": 0.02}
+        },
+        {
+          "id": "opt5",
+          "text": "🏒 Ice Hockey",
+          "countryWeights": {"CA": 0.40, "US": 0.05, "SE": 0.30, "NO": 0.10, "DK": 0.05, "GB": 0.02, "DE": 0.03, "FR": 0.02, "IT": 0.01, "ES": 0.01, "JP": 0.02, "CN": 0.02, "KR": 0.02, "AU": 0.02, "BR": 0.01, "MX": 0.01, "AR": 0.01, "NL": 0.03, "IN": 0.01, "TH": 0.01}
+        },
+        {
+          "id": "opt6",
+          "text": "⚾ Baseball",
+          "countryWeights": {"US": 0.18, "JP": 0.35, "KR": 0.30, "CA": 0.08, "MX": 0.08, "GB": 0.02, "AU": 0.03, "IT": 0.02, "ES": 0.02, "FR": 0.02, "DE": 0.02, "BR": 0.02, "AR": 0.02, "CN": 0.03, "IN": 0.01, "NL": 0.02, "DK": 0.02, "NO": 0.02, "SE": 0.02, "TH": 0.02}
+        }
+      ],
+      "precomputedIG": 0.95
+    },
+    {
+      "id": "q_beverage_morning_001",
+      "phase": "nationality",
+      "category": "beverage_preference",
+      "text": "What's your preferred morning beverage?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "☕ Coffee (black or with milk)",
+          "countryWeights": {"IT": 0.75, "SE": 0.80, "NO": 0.75, "DK": 0.75, "NL": 0.70, "CA": 0.70, "US": 0.65, "AU": 0.65, "DE": 0.65, "FR": 0.60, "ES": 0.60, "BR": 0.60, "KR": 0.55, "GB": 0.30, "MX": 0.50, "AR": 0.35, "JP": 0.25, "CN": 0.15, "TH": 0.30, "IN": 0.15}
+        },
+        {
+          "id": "opt2",
+          "text": "🍵 Tea (hot)",
+          "countryWeights": {"GB": 0.60, "IN": 0.70, "JP": 0.60, "CN": 0.70, "TH": 0.50, "KR": 0.25, "US": 0.20, "CA": 0.18, "AU": 0.20, "DE": 0.20, "FR": 0.12, "IT": 0.08, "ES": 0.12, "BR": 0.08, "MX": 0.10, "AR": 0.10, "NL": 0.15, "DK": 0.15, "NO": 0.15, "SE": 0.12}
+        },
+        {
+          "id": "opt3",
+          "text": "🧉 Mate or herbal tea",
+          "countryWeights": {"AR": 0.40, "BR": 0.10, "US": 0.05, "GB": 0.05, "CA": 0.05, "AU": 0.05, "DE": 0.05, "FR": 0.08, "IT": 0.05, "ES": 0.08, "MX": 0.05, "JP": 0.05, "CN": 0.05, "IN": 0.05, "KR": 0.05, "NL": 0.05, "DK": 0.05, "NO": 0.05, "SE": 0.05, "TH": 0.05}
+        },
+        {
+          "id": "opt4",
+          "text": "🥤 Juice or smoothie",
+          "countryWeights": {"US": 0.05, "CA": 0.04, "AU": 0.05, "GB": 0.04, "BR": 0.20, "MX": 0.15, "TH": 0.12, "DE": 0.05, "FR": 0.08, "IT": 0.05, "ES": 0.08, "JP": 0.05, "CN": 0.05, "IN": 0.05, "KR": 0.05, "AR": 0.10, "NL": 0.05, "DK": 0.04, "NO": 0.04, "SE": 0.03}
+        },
+        {
+          "id": "opt5",
+          "text": "🥛 Milk or nothing",
+          "countryWeights": {"NL": 0.05, "DK": 0.01, "NO": 0.01, "SE": 0.00, "US": 0.05, "CA": 0.03, "AU": 0.05, "GB": 0.01, "DE": 0.05, "FR": 0.02, "IT": 0.02, "ES": 0.02, "BR": 0.02, "MX": 0.05, "AR": 0.05, "JP": 0.05, "CN": 0.05, "IN": 0.05, "KR": 0.03, "TH": 0.01}
+        }
+      ],
+      "precomputedIG": 0.88
+    },
+    {
+      "id": "q_transport_daily_001",
+      "phase": "nationality",
+      "category": "transport_preference",
+      "text": "How do you usually get around town?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🚗 Drive my own car",
+          "countryWeights": {"US": 0.85, "CA": 0.80, "AU": 0.80, "IT": 0.70, "ES": 0.65, "GB": 0.65, "FR": 0.65, "NO": 0.65, "DE": 0.60, "SE": 0.60, "BR": 0.50, "MX": 0.50, "AR": 0.55, "NL": 0.30, "DK": 0.35, "JP": 0.25, "CN": 0.20, "KR": 0.30, "IN": 0.20, "TH": 0.30}
+        },
+        {
+          "id": "opt2",
+          "text": "🚇 Public transit (bus, train, subway)",
+          "countryWeights": {"JP": 0.60, "CN": 0.45, "KR": 0.55, "GB": 0.20, "DE": 0.25, "FR": 0.20, "ES": 0.20, "IT": 0.15, "BR": 0.30, "MX": 0.30, "AR": 0.30, "TH": 0.20, "IN": 0.40, "US": 0.08, "CA": 0.12, "AU": 0.12, "NL": 0.15, "DK": 0.15, "NO": 0.18, "SE": 0.20}
+        },
+        {
+          "id": "opt3",
+          "text": "🚲 Bicycle",
+          "countryWeights": {"NL": 0.50, "DK": 0.45, "CN": 0.25, "TH": 0.40, "DE": 0.10, "NO": 0.12, "SE": 0.15, "JP": 0.10, "GB": 0.05, "FR": 0.08, "IT": 0.08, "ES": 0.05, "US": 0.04, "CA": 0.05, "AU": 0.05, "BR": 0.08, "MX": 0.05, "AR": 0.05, "KR": 0.05, "IN": 0.25}
+        },
+        {
+          "id": "opt4",
+          "text": "🚶 Walk",
+          "countryWeights": {"GB": 0.10, "ES": 0.10, "IT": 0.07, "FR": 0.07, "DE": 0.05, "JP": 0.05, "CN": 0.10, "IN": 0.15, "MX": 0.15, "TH": 0.10, "US": 0.03, "CA": 0.03, "AU": 0.03, "BR": 0.12, "AR": 0.10, "NL": 0.05, "DK": 0.05, "NO": 0.05, "SE": 0.05, "KR": 0.10}
+        }
+      ],
+      "precomputedIG": 0.91
+    },
+    {
+      "id": "q_climate_ideal_001",
+      "phase": "nationality",
+      "category": "climate_preference",
+      "text": "What's your ideal weather for a perfect day?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "☀️ Hot and sunny (25-35°C / 77-95°F)",
+          "countryWeights": {"ES": 0.60, "IT": 0.50, "BR": 0.70, "MX": 0.60, "TH": 0.70, "IN": 0.60, "AU": 0.55, "AR": 0.35, "US": 0.45, "FR": 0.35, "GB": 0.30, "CA": 0.25, "DE": 0.30, "JP": 0.30, "CN": 0.35, "KR": 0.30, "NL": 0.30, "DK": 0.20, "NO": 0.15, "SE": 0.15}
+        },
+        {
+          "id": "opt2",
+          "text": "🌤️ Mild and pleasant (15-25°C / 59-77°F)",
+          "countryWeights": {"GB": 0.50, "FR": 0.50, "DE": 0.50, "NL": 0.55, "DK": 0.50, "JP": 0.50, "CN": 0.45, "KR": 0.50, "AR": 0.50, "IT": 0.35, "ES": 0.30, "US": 0.35, "CA": 0.40, "AU": 0.35, "BR": 0.25, "MX": 0.30, "IN": 0.30, "NO": 0.35, "SE": 0.40, "TH": 0.25}
+        },
+        {
+          "id": "opt3",
+          "text": "❄️ Cool and crisp (5-15°C / 41-59°F)",
+          "countryWeights": {"NO": 0.50, "SE": 0.45, "DK": 0.30, "CA": 0.35, "GB": 0.20, "DE": 0.20, "FR": 0.15, "IT": 0.15, "ES": 0.10, "US": 0.20, "AU": 0.10, "JP": 0.20, "CN": 0.20, "KR": 0.20, "NL": 0.15, "BR": 0.05, "MX": 0.10, "AR": 0.15, "IN": 0.10, "TH": 0.05}
+        }
+      ],
+      "precomputedIG": 0.85
+    },
+    {
+      "id": "q_work_environment_001",
+      "phase": "nationality",
+      "category": "work_style",
+      "text": "What's your preferred work environment?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🏢 Traditional office setting",
+          "countryWeights": {"JP": 0.70, "KR": 0.70, "CN": 0.65, "IN": 0.60, "IT": 0.60, "ES": 0.60, "FR": 0.55, "DE": 0.55, "US": 0.55, "BR": 0.55, "MX": 0.55, "AR": 0.55, "TH": 0.60, "GB": 0.50, "CA": 0.50, "AU": 0.50, "NL": 0.45, "DK": 0.45, "NO": 0.45, "SE": 0.45}
+        },
+        {
+          "id": "opt2",
+          "text": "🏠 Remote/work from home",
+          "countryWeights": {"US": 0.25, "CA": 0.20, "AU": 0.20, "GB": 0.15, "IN": 0.20, "BR": 0.20, "AR": 0.20, "DE": 0.15, "FR": 0.15, "IT": 0.15, "ES": 0.15, "NL": 0.15, "DK": 0.15, "NO": 0.15, "SE": 0.15, "JP": 0.10, "KR": 0.10, "CN": 0.10, "MX": 0.15, "TH": 0.12}
+        },
+        {
+          "id": "opt3",
+          "text": "🔄 Hybrid (mix of office and remote)",
+          "countryWeights": {"NL": 0.35, "DK": 0.35, "NO": 0.35, "SE": 0.35, "GB": 0.30, "DE": 0.25, "FR": 0.25, "CA": 0.25, "US": 0.15, "AU": 0.25, "IT": 0.20, "ES": 0.20, "JP": 0.15, "KR": 0.15, "CN": 0.15, "BR": 0.15, "MX": 0.10, "AR": 0.15, "IN": 0.10, "TH": 0.08}
+        },
+        {
+          "id": "opt4",
+          "text": "🌳 Outdoor or field work",
+          "countryWeights": {"AU": 0.05, "BR": 0.10, "MX": 0.20, "AR": 0.10, "TH": 0.20, "IN": 0.10, "CN": 0.10, "US": 0.05, "CA": 0.05, "GB": 0.05, "DE": 0.05, "FR": 0.05, "IT": 0.05, "ES": 0.05, "JP": 0.05, "KR": 0.05, "NL": 0.05, "DK": 0.05, "NO": 0.05, "SE": 0.05}
+        }
+      ],
+      "precomputedIG": 0.82
+    },
+    {
+      "id": "q_housing_type_001",
+      "phase": "nationality",
+      "category": "housing_preference",
+      "text": "What type of home do you live in?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🏠 Detached house",
+          "countryWeights": {"AU": 0.70, "CA": 0.60, "US": 0.62, "MX": 0.60, "NO": 0.55, "GB": 0.55, "NL": 0.55, "DK": 0.50, "TH": 0.55, "SE": 0.40, "FR": 0.40, "BR": 0.40, "IN": 0.40, "DE": 0.40, "IT": 0.35, "JP": 0.35, "AR": 0.35, "ES": 0.30, "CN": 0.20, "KR": 0.25}
+        },
+        {
+          "id": "opt2",
+          "text": "🏢 Apartment/Flat",
+          "countryWeights": {"CN": 0.70, "KR": 0.65, "ES": 0.60, "JP": 0.55, "IT": 0.55, "AR": 0.55, "DE": 0.50, "FR": 0.50, "SE": 0.50, "IN": 0.50, "BR": 0.50, "GB": 0.35, "NL": 0.35, "DK": 0.40, "NO": 0.35, "TH": 0.35, "US": 0.30, "CA": 0.30, "MX": 0.30, "AU": 0.22}
+        },
+        {
+          "id": "opt3",
+          "text": "🏘️ Townhouse/Condo",
+          "countryWeights": {"US": 0.06, "CA": 0.08, "GB": 0.08, "AU": 0.06, "NL": 0.08, "DK": 0.08, "NO": 0.08, "SE": 0.08, "DE": 0.08, "FR": 0.08, "IT": 0.08, "ES": 0.08, "JP": 0.08, "KR": 0.08, "CN": 0.08, "BR": 0.08, "MX": 0.08, "AR": 0.08, "IN": 0.08, "TH": 0.08}
+        },
+        {
+          "id": "opt4",
+          "text": "🏚️ Other",
+          "countryWeights": {"US": 0.02, "CA": 0.02, "GB": 0.02, "AU": 0.02, "DE": 0.02, "FR": 0.02, "IT": 0.02, "ES": 0.02, "JP": 0.02, "KR": 0.02, "CN": 0.02, "BR": 0.02, "MX": 0.02, "AR": 0.02, "IN": 0.02, "NL": 0.02, "DK": 0.02, "NO": 0.02, "SE": 0.02, "TH": 0.02}
+        }
+      ],
+      "precomputedIG": 0.79
+    },
+    {
+      "id": "q_physical_airplane_001",
+      "phase": "height_relative",
+      "category": "physical_comfort",
+      "text": "How do you feel about airplane legroom in economy class?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "✈️ Plenty of space, very comfortable",
+          "heightAdjustment": -12,
+          "confidence": 0.85
+        },
+        {
+          "id": "opt2",
+          "text": "😊 Comfortable enough, no major complaints",
+          "heightAdjustment": -5,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt3",
+          "text": "😐 A bit tight, but manageable",
+          "heightAdjustment": 3,
+          "confidence": 0.65
+        },
+        {
+          "id": "opt4",
+          "text": "😣 Very cramped, knees hit the seat",
+          "heightAdjustment": 10,
+          "confidence": 0.80
+        },
+        {
+          "id": "opt5",
+          "text": "😤 Extremely uncomfortable, can barely fit",
+          "heightAdjustment": 18,
+          "confidence": 0.90
+        }
+      ],
+      "precomputedIG": 0.88
+    },
+    {
+      "id": "q_physical_doorways_001",
+      "phase": "height_relative",
+      "category": "physical_comfort",
+      "text": "How often do you need to duck or watch your head around doorways?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🚪 Never, doorways are always plenty high",
+          "heightAdjustment": -8,
+          "confidence": 0.75
+        },
+        {
+          "id": "opt2",
+          "text": "😊 Rarely, only in old buildings",
+          "heightAdjustment": 4,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt3",
+          "text": "😐 Sometimes, I'm aware of low doorways",
+          "heightAdjustment": 9,
+          "confidence": 0.75
+        },
+        {
+          "id": "opt4",
+          "text": "🤕 Often, it's a constant concern",
+          "heightAdjustment": 15,
+          "confidence": 0.85
+        }
+      ],
+      "precomputedIG": 0.86
+    },
+    {
+      "id": "q_social_photos_001",
+      "phase": "height_relative",
+      "category": "social_situations",
+      "text": "When taking group photos, where do you usually end up?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "📸 Front row, always",
+          "heightAdjustment": -10,
+          "confidence": 0.80
+        },
+        {
+          "id": "opt2",
+          "text": "😊 Wherever I fit, no preference",
+          "heightAdjustment": 0,
+          "confidence": 0.60
+        },
+        {
+          "id": "opt3",
+          "text": "👥 Usually in the back",
+          "heightAdjustment": 8,
+          "confidence": 0.75
+        },
+        {
+          "id": "opt4",
+          "text": "🎯 Always asked to go to the back",
+          "heightAdjustment": 14,
+          "confidence": 0.85
+        }
+      ],
+      "precomputedIG": 0.82
+    },
+    {
+      "id": "q_shopping_pants_001",
+      "phase": "height_relative",
+      "category": "shopping_experience",
+      "text": "When buying pants, what's your usual challenge?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "👖 Too long, always need hemming",
+          "heightAdjustment": -11,
+          "confidence": 0.85
+        },
+        {
+          "id": "opt2",
+          "text": "✅ Perfect length, no issues",
+          "heightAdjustment": 0,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt3",
+          "text": "📏 Too short, hard to find long enough",
+          "heightAdjustment": 10,
+          "confidence": 0.80
+        },
+        {
+          "id": "opt4",
+          "text": "🎯 Need to shop in tall/long section",
+          "heightAdjustment": 16,
+          "confidence": 0.90
+        }
+      ],
+      "precomputedIG": 0.87
+    },
+    {
+      "id": "q_vehicle_seat_001",
+      "phase": "height_relative",
+      "category": "vehicle_fit",
+      "text": "How do you adjust your car seat?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🚗 Move it forward to reach pedals",
+          "heightAdjustment": -9,
+          "confidence": 0.80
+        },
+        {
+          "id": "opt2",
+          "text": "✅ It's usually fine as is",
+          "heightAdjustment": 0,
+          "confidence": 0.65
+        },
+        {
+          "id": "opt3",
+          "text": "🔙 All the way back for legroom",
+          "heightAdjustment": 9,
+          "confidence": 0.80
+        },
+        {
+          "id": "opt4",
+          "text": "😤 Even all the way back isn't enough",
+          "heightAdjustment": 16,
+          "confidence": 0.90
+        }
+      ],
+      "precomputedIG": 0.85
+    },
+    {
+      "id": "q_furniture_counters_001",
+      "phase": "height_relative",
+      "category": "furniture_fit",
+      "text": "How do standard kitchen counters feel to you?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🔝 Too high, need step stool sometimes",
+          "heightAdjustment": -12,
+          "confidence": 0.85
+        },
+        {
+          "id": "opt2",
+          "text": "✅ Perfect height for working",
+          "heightAdjustment": 0,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt3",
+          "text": "😐 A bit low, but manageable",
+          "heightAdjustment": 6,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt4",
+          "text": "😣 Way too low, back hurts after cooking",
+          "heightAdjustment": 13,
+          "confidence": 0.85
+        }
+      ],
+      "precomputedIG": 0.84
+    },
+    {
+      "id": "q_daily_shelves_001",
+      "phase": "height_relative",
+      "category": "daily_activities",
+      "text": "How do you reach items on high shelves at home?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🙋 Easily, no problem at all",
+          "heightAdjustment": 11,
+          "confidence": 0.85
+        },
+        {
+          "id": "opt2",
+          "text": "😊 Can reach with a stretch",
+          "heightAdjustment": 3,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt3",
+          "text": "🪜 Need a step stool",
+          "heightAdjustment": -8,
+          "confidence": 0.80
+        },
+        {
+          "id": "opt4",
+          "text": "😅 Ask someone taller for help",
+          "heightAdjustment": -13,
+          "confidence": 0.85
+        }
+      ],
+      "precomputedIG": 0.86
+    },
+    {
+      "id": "q_social_concerts_001",
+      "phase": "height_relative",
+      "category": "social_situations",
+      "text": "At concerts or events, can you see over the crowd?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "👀 Easily, great view from anywhere",
+          "heightAdjustment": 12,
+          "confidence": 0.85
+        },
+        {
+          "id": "opt2",
+          "text": "😊 Usually yes, decent view",
+          "heightAdjustment": 5,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt3",
+          "text": "😐 Sometimes struggle to see",
+          "heightAdjustment": -4,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt4",
+          "text": "😭 Never, always blocked by others",
+          "heightAdjustment": -12,
+          "confidence": 0.85
+        }
+      ],
+      "precomputedIG": 0.87
+    },
+    {
+      "id": "q_physical_shower_001",
+      "phase": "height_relative",
+      "category": "physical_comfort",
+      "text": "How do shower heads work for you in most places?",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "🚿 Perfect height, no issues",
+          "heightAdjustment": -5,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt2",
+          "text": "😊 Usually okay, occasionally adjust",
+          "heightAdjustment": 2,
+          "confidence": 0.65
+        },
+        {
+          "id": "opt3",
+          "text": "😐 Need to duck or bend a bit",
+          "heightAdjustment": 8,
+          "confidence": 0.75
+        },
+        {
+          "id": "opt4",
+          "text": "😤 Way too low, very annoying",
+          "heightAdjustment": 14,
+          "confidence": 0.85
+        }
+      ],
+      "precomputedIG": 0.83
+    },
+    {
+      "id": "q_shopping_shoes_001",
+      "phase": "height_relative",
+      "category": "shopping_experience",
+      "text": "What's your shoe size? (US Men's equivalent)",
+      "options": [
+        {
+          "id": "opt1",
+          "text": "👟 7 or smaller",
+          "heightAdjustment": -12,
+          "confidence": 0.80
+        },
+        {
+          "id": "opt2",
+          "text": "👟 8-9",
+          "heightAdjustment": -6,
+          "confidence": 0.70
+        },
+        {
+          "id": "opt3",
+          "text": "👟 10-11",
+          "heightAdjustment": 3,
+          "confidence": 0.65
+        },
+        {
+          "id": "opt4",
+          "text": "👟 12-13",
+          "heightAdjustment": 9,
+          "confidence": 0.75
+        },
+        {
+          "id": "opt5",
+          "text": "👟 14 or larger",
+          "heightAdjustment": 15,
+          "confidence": 0.85
+        }
+      ],
+      "precomputedIG": 0.84
+    }
+  ]
+}
