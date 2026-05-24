@@ -87,6 +87,26 @@
   margin: 0;
 }
 
+.confidence-message {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.confidence-message p {
+  color: white;
+  font-size: 1.05em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confidence-message strong {
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .result-actions {
   display: flex;
   gap: 15px;

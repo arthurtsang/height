@@ -90,6 +90,44 @@ class HeightService {
   }
 
   /**
+   * Determine likely nationality from answers
+   * @param {Array} answers - User answers
+   * @returns {object} Nationality and confidence
+   */
+  determineNationality(answers) {
+    // Count nationality indicators from cultural answers
+    const nationalityVotes = {};
+    let totalVotes = 0;
+    
+    answers.forEach(answer => {
+      if (answer.nationality) {
+        nationalityVotes[answer.nationality] = (nationalityVotes[answer.nationality] || 0) + 1;
+        totalVotes++;
+      }
+    });
+    
+    if (totalVotes === 0) {
+      return { nationality: 'global citizen', confidence: 75 };
+    }
+    
+    // Find most common nationality
+    let topNationality = 'global citizen';
+    let topCount = 0;
+    
+    for (const [nationality, count] of Object.entries(nationalityVotes)) {
+      if (count > topCount) {
+        topCount = count;
+        topNationality = nationality;
+      }
+    }
+    
+    // Calculate confidence (higher with more consistent answers)
+    const confidence = Math.min(95, Math.round((topCount / totalVotes) * 100));
+    
+    return { nationality: topNationality, confidence };
+  }
+
+  /**
    * Get height category description
    * @param {number} heightCm - Height in centimeters
    * @returns {string} Description
@@ -100,6 +138,47 @@ class HeightService {
     if (heightCm < 175) return 'average';
     if (heightCm < 185) return 'above average';
     return 'tall';
+  }
+  
+  /**
+   * Get height relative to nationality average
+   * @param {number} heightCm - Height in centimeters
+   * @param {string} nationality - Detected nationality
+   * @returns {string} Relative height description
+   */
+  getRelativeHeight(heightCm, nationality) {
+    // Approximate average heights by nationality (in cm)
+    const averageHeights = {
+      'American': 175,
+      'Chinese': 169,
+      'Indian': 165,
+      'Japanese': 171,
+      'Korean': 173,
+      'British': 175,
+      'German': 178,
+      'French': 175,
+      'Italian': 175,
+      'Spanish': 173,
+      'Brazilian': 173,
+      'Mexican': 169,
+      'Canadian': 175,
+      'Australian': 175,
+      'Dutch': 183,
+      'Swedish': 180,
+      'Norwegian': 179,
+      'Russian': 176,
+      'Turkish': 174,
+      'global citizen': 171
+    };
+    
+    const avgHeight = averageHeights[nationality] || 171;
+    const diff = heightCm - avgHeight;
+    
+    if (diff > 10) return 'way above average';
+    if (diff > 5) return 'above average';
+    if (diff > -5) return 'average';
+    if (diff > -10) return 'below average';
+    return 'way below average';
   }
 
   /**

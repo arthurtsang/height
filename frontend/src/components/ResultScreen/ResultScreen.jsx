@@ -64,6 +64,16 @@ const ResultScreen = ({ result, onRestart }) => {
             <p>{result.message}</p>
           </div>
         )}
+        
+        {result.nationality && result.confidence && result.relativeHeight && (
+          <div className="confidence-message">
+            <p>
+              🎯 I'm <strong>{result.confidence}% confident</strong> you're{' '}
+              <strong>{result.relativeHeight}</strong> height for a{' '}
+              <strong>{result.nationality}</strong>!
+            </p>
+          </div>
+        )}
       </div>
 
       <div className="result-actions">

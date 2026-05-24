@@ -148,12 +148,19 @@ class SessionService {
       const heightCm = heightService.calculateHeight(sessionData.answers);
       const formattedHeight = formatHeight(heightCm);
       const message = heightService.generateMessage(heightCm);
+      
+      // Determine nationality and confidence
+      const { nationality, confidence } = heightService.determineNationality(sessionData.answers);
+      const relativeHeight = heightService.getRelativeHeight(heightCm, nationality);
 
-      logger.info('Result generated', { sessionId, height: heightCm });
+      logger.info('Result generated', { sessionId, height: heightCm, nationality, confidence });
 
       return {
         height: formattedHeight,
         message,
+        nationality,
+        confidence,
+        relativeHeight,
         share_text: `I'm ${formattedHeight.display} according to this height quiz! Can you guess yours? 📏`
       };
     } catch (error) {
