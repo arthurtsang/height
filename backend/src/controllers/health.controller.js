@@ -7,16 +7,24 @@ class HealthController {
    * Health check endpoint
    */
   async checkHealth(req, res) {
+    const redisStatus = redisService.getConnectionStatus();
+    
     const health = {
       status: 'ok',
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
-      redis: redisService.getConnectionStatus() ? 'connected' : 'disconnected',
+      storage: {
+        type: redisStatus.usingMemoryFallback ? 'memory' : 'redis',
+        redis: {
+          enabled: redisStatus.redisEnabled,
+          connected: redisStatus.connected
+        }
+      },
       questions: questionService.getTotalQuestions()
     };
 
-    const statusCode = health.redis === 'connected' ? 200 : 503;
-    res.status(statusCode).json(health);
+    // Always return 200 if app is running (even with memory fallback)
+    res.status(200).json(health);
   }
 }
 

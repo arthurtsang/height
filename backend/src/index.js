@@ -10,20 +10,27 @@ const PORT = config.port;
  */
 async function startServer() {
   try {
-    // Connect to Redis
-    logger.info('Connecting to Redis...');
-    const redisConnected = await redisService.connect();
+    // Connect to Redis (or use memory fallback)
+    logger.info('Initializing storage...');
+    await redisService.connect();
     
-    if (!redisConnected) {
-      logger.error('Failed to connect to Redis. Server will not start.');
-      process.exit(1);
+    // Start memory cleanup for fallback mode
+    redisService.startMemoryCleanup();
+    
+    const status = redisService.getConnectionStatus();
+    if (status.usingMemoryFallback) {
+      logger.warn('Running with in-memory storage (sessions will not persist across restarts)');
+    } else if (status.connected) {
+      logger.info('Redis connected successfully');
     }
 
     // Start Express server
     app.listen(PORT, () => {
       logger.info(`Server running on port ${PORT}`, {
         environment: config.nodeEnv,
-        port: PORT
+        port: PORT,
+        redisEnabled: config.redis.enabled,
+        usingMemoryFallback: status.usingMemoryFallback
       });
     });
   } catch (error) {

@@ -23,17 +23,18 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
       - PORT=3000
+      - REDIS_ENABLED=true
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - CORS_ORIGIN=http://localhost:5173
-      - SESSION_TTL=3600
-      - RATE_LIMIT_WINDOW=900000
-      - RATE_LIMIT_MAX=100
+      - LOG_LEVEL=info
     depends_on:
       redis:
         condition: service_healthy
+    volumes:
+      - ./backend/src:/app/src
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/api/health"]
       interval: 10s
