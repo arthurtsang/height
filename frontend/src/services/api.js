@@ -1,8 +1,9 @@
 // Determine API base URL based on environment
 const getApiBaseUrl = () => {
-  // If explicitly set via environment variable, use it
-  if (import.meta.env.VITE_API_URL) {
-    return import.meta.env.VITE_API_URL;
+  // If explicitly set via environment variable and not empty, use it
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (envUrl && envUrl.trim() !== '') {
+    return envUrl;
   }
   
   // In production, use relative URLs (same domain)
