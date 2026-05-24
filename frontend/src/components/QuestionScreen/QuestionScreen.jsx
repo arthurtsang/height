@@ -14,7 +14,7 @@ const QuestionScreen = ({ question, progress, onAnswer, isLoading }) => {
 
       <div className="question-content">
         <div className="question-number">
-          Question {question.questionNumber} of 10
+          Question {question.questionNumber}
         </div>
         
         <h2 className="question-text">{question.text}</h2>

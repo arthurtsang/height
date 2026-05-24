@@ -72,3 +72,19 @@ If you prefer to use an absolute URL instead of relative:
 3. The code will use this URL for all API calls
 
 However, relative URLs are recommended for Vercel deployments as they work automatically with preview deployments and custom domains.
+
+## Additional Fixes
+
+### 1. Removed Rate Limiting
+Rate limiting has been removed from the application as DDoS protection will be handled by Cloudflare.
+
+**Changes:**
+- Removed rate limiter import from [`backend/src/app.js`](backend/src/app.js:1)
+- Removed rate limiter middleware application
+- Rate limiting configuration in `config/index.js` is now unused but kept for reference
+
+### 2. Fixed Question Counter UI
+Changed "Question X of 10" to just "Question X" in [`QuestionScreen.jsx`](frontend/src/components/QuestionScreen/QuestionScreen.jsx:17) since the adaptive system doesn't have a fixed number of questions.
+
+### 3. Trust Proxy Setting
+Added `app.set('trust proxy', 1)` to [`backend/src/app.js`](backend/src/app.js:13) to enable Express to trust proxy headers from Vercel. This is required because Vercel acts as a reverse proxy.

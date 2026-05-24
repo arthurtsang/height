@@ -4,10 +4,13 @@ const cors = require('cors');
 const config = require('./config');
 const routes = require('./routes');
 const errorHandler = require('./middleware/errorHandler');
-const { sessionRateLimiter } = require('./middleware/rateLimiter');
 const logger = require('./utils/logger');
 
 const app = express();
+
+// Trust proxy - required for Vercel and other reverse proxies
+// This allows Express to correctly identify client IPs from X-Forwarded-For header
+app.set('trust proxy', 1);
 
 // Security middleware
 app.use(helmet());
@@ -31,9 +34,6 @@ app.use((req, res, next) => {
   });
   next();
 });
-
-// Apply rate limiter to session creation
-app.use('/api/session/start', sessionRateLimiter);
 
 // Mount API routes
 app.use('/api', routes);
