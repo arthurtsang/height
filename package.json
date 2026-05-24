@@ -1,0 +1,21 @@
+{
+  "name": "height-quiz",
+  "version": "1.0.0",
+  "description": "Height prediction quiz application",
+  "private": true,
+  "scripts": {
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "build": "npm run install:frontend && npm run install:backend && cd frontend && npm run build",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "test": "cd backend && npm test"
+  },
+  "keywords": [
+    "height",
+    "quiz",
+    "prediction"
+  ],
+  "author": "",
+  "license": "MIT"
+}
