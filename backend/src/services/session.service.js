@@ -99,12 +99,12 @@ class SessionService {
           current: 1,
           total: config.adaptive.maxQuestions || 25,
           questionsAsked: 1,
-          confidence: Math.round(avgConfidence * 100),
-          attributes: {
+          averageConfidence: Math.round(avgConfidence * 100),
+          confidenceBreakdown: {
             nationality: Math.round(sessionData.attributes.nationality.confidence * 100),
             sex: Math.round(sessionData.attributes.sex.confidence * 100),
-            age_group: Math.round(sessionData.attributes.age_group.confidence * 100),
-            height_deviation: Math.round(sessionData.attributes.height_deviation.confidence * 100)
+            age: Math.round(sessionData.attributes.age_group.confidence * 100),
+            height: Math.round(sessionData.attributes.height_deviation.confidence * 100)
           }
         }
       };
@@ -228,12 +228,12 @@ class SessionService {
           current: sessionData.askedQuestions.length,
           total: config.adaptive.maxQuestions || 25,
           questionsAsked: sessionData.askedQuestions.length,
-          confidence: Math.round(avgConfidence * 100),
-          attributes: {
+          averageConfidence: Math.round(avgConfidence * 100),
+          confidenceBreakdown: {
             nationality: Math.round(sessionData.attributes.nationality.confidence * 100),
             sex: Math.round(sessionData.attributes.sex.confidence * 100),
-            age_group: Math.round(sessionData.attributes.age_group.confidence * 100),
-            height_deviation: Math.round(sessionData.attributes.height_deviation.confidence * 100)
+            age: Math.round(sessionData.attributes.age_group.confidence * 100),
+            height: Math.round(sessionData.attributes.height_deviation.confidence * 100)
           }
         }
       };

@@ -53,8 +53,19 @@ export function useQuiz() {
         setConfidenceBreakdown(data.progress.confidenceBreakdown || null);
       }
     } catch (err) {
-      setError('Failed to submit answer. Please try again.');
-      console.error(err);
+      // Check if session expired (404 error)
+      if (err.message && (err.message.includes('404') || err.message.includes('not found') || err.message.includes('expired'))) {
+        console.log('Session expired, restarting quiz...');
+        setError('Session expired. Starting a new quiz...');
+        // Automatically restart the quiz
+        setTimeout(() => {
+          restartQuiz();
+          startQuiz();
+        }, 1500);
+      } else {
+        setError('Failed to submit answer. Please try again.');
+        console.error(err);
+      }
     } finally {
       setIsLoading(false);
     }
