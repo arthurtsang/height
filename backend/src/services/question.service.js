@@ -58,6 +58,14 @@ class QuestionService {
   }
 
   /**
+   * Get all country statistics
+   * @returns {object} Country statistics object
+   */
+  getCountryStatistics() {
+    return this.countryStats;
+  }
+
+  /**
    * Get question by ID
    * @param {string} questionId - Question ID
    * @returns {object} Question object
