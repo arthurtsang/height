@@ -56,8 +56,10 @@ const QuestionScreen = ({ question, progress, confidenceBreakdown, hints, onAnsw
   return (
     <div className="question-screen">
       <div className="progress-bar">
-        <div className="progress-fill" style={{ width: `${progress}%` }}>
-          <span className="progress-text">{Math.round(progress)}%</span>
+        <div className="progress-fill" style={{ width: `${Math.max(progress, 10)}%` }}>
+          <span className="progress-text">
+            {progress < 30 ? `Question ${question.questionNumber || 1}` : `${Math.round(progress)}%`}
+          </span>
         </div>
       </div>
       
