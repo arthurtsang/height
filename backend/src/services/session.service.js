@@ -433,7 +433,7 @@ class SessionService {
         relativeHeight: this.getCategoryDescription(heightDeviation).toLowerCase(),
         insights: {
           countryContext: `Based on your preferences, you seem to align with ${countryName} cultural patterns.`,
-          heightContext: `You're ${this.getHeightPercentile(relativeToAvg)} than average for a ${sex} ${ageGroup} in ${countryName}.`,
+          heightContext: `You're ${this.getHeightPercentile(relativeToAvg)} than average for a ${sex} ${ageGroup} from ${countryName}.`,
           relativeToAvg: `${relativeSign}${relativeToAvg.toFixed(1)}cm from average`
         },
         message: heightService.generateMessage(predictedHeightCm),

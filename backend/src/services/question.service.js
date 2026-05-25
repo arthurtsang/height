@@ -237,6 +237,7 @@ class QuestionService {
     return {
       questionId,
       answerId,
+      text: answer.text,
       category: question.category,
       weights: answer.weights || {
         nationality: {},
