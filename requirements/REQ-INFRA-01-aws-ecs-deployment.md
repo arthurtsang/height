@@ -1,6 +1,6 @@
 # REQ-INFRA-01: AWS ECS Deployment Infrastructure
 
-**Status:** Draft
+**Status:** REJECTED
 
 **Related Work Items:** REQ-UI-01, REQ-API-01, SAD-001
 
