@@ -73,7 +73,7 @@ class RedisService {
     }
   }
 
-  async get(key) {
+  async get(key, touchTTL = true) {
     try {
       if (this.useMemoryFallback || !this.isConnected) {
         // Get from memory
@@ -86,11 +86,24 @@ class RedisService {
           return null;
         }
         
+        // Refresh TTL on access (touch the session to keep it alive)
+        if (touchTTL) {
+          const newExpiresAt = Date.now() + (config.redis.ttl * 1000);
+          this.memoryStore.set(key, { value: item.value, expiresAt: newExpiresAt });
+        }
+        
         return item.value;
       }
 
       const value = await this.client.get(key);
-      return value ? JSON.parse(value) : null;
+      if (!value) return null;
+      
+      // Refresh TTL on access for Redis too
+      if (touchTTL) {
+        await this.client.expire(key, config.redis.ttl);
+      }
+      
+      return JSON.parse(value);
     } catch (error) {
       logger.error('Redis GET error, checking memory fallback', { key, error: error.message });
       // Try memory fallback

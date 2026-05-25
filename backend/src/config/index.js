@@ -8,7 +8,7 @@ module.exports = {
     host: process.env.REDIS_HOST || 'localhost',
     port: parseInt(process.env.REDIS_PORT) || 6379,
     password: process.env.REDIS_PASSWORD || undefined,
-    ttl: 3600 // 1 hour in seconds
+    ttl: 7200 // 2 hours in seconds (generous for quiz completion)
   },
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
