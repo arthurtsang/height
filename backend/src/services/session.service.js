@@ -221,6 +221,13 @@ class SessionService {
       sessionData.recentCategories.push(nextQuestion.category);
       await redisService.set(`session:${sessionData.sessionId}`, sessionData);
 
+      // Get current best guesses for hint generation
+      const currentGuesses = {
+        nationality: inferenceService.getMostLikelyValue(sessionData.attributes.nationality.distribution),
+        sex: inferenceService.getMostLikelyValue(sessionData.attributes.sex.distribution),
+        ageGroup: inferenceService.getMostLikelyValue(sessionData.attributes.age_group.distribution)
+      };
+
       return {
         completed: false,
         next_question: questionService.formatQuestionForResponse(nextQuestion),
@@ -234,7 +241,8 @@ class SessionService {
             sex: Math.round(sessionData.attributes.sex.confidence * 100),
             age: Math.round(sessionData.attributes.age_group.confidence * 100),
             height: Math.round(sessionData.attributes.height_deviation.confidence * 100)
-          }
+          },
+          hints: currentGuesses
         }
       };
     } catch (error) {
@@ -388,6 +396,9 @@ class SessionService {
       const relativeToAvg = predictedHeightCm - baseHeight;
       const relativeSign = relativeToAvg >= 0 ? '+' : '';
       
+      // Generate fun facts about how we deduced the answer
+      const funFacts = this.generateFunFacts(sessionData, nationality, sex, ageGroup, countryName);
+      
       logger.info('Multi-attribute result generated', {
         sessionId,
         height: predictedHeightCm,
@@ -427,12 +438,59 @@ class SessionService {
         },
         message: heightService.generateMessage(predictedHeightCm),
         questionsAsked: sessionData.askedQuestions.length,
+        funFacts: funFacts,
         share_text: `I'm predicted to be ${formattedHeight.display} (${predictedHeightCm}cm) - ${this.getCategoryDescription(heightDeviation)}! 🎯 #HeightQuiz`
       };
     } catch (error) {
       logger.error('Error getting result', { sessionId, error: error.message });
       throw error;
     }
+  }
+
+  /**
+   * Generate fun facts about how we deduced the answer
+   * @param {object} sessionData - Session data
+   * @param {string} nationality - Determined nationality
+   * @param {string} sex - Determined sex
+   * @param {string} ageGroup - Determined age group
+   * @param {string} countryName - Country name
+   * @returns {Array<string>} Fun facts
+   */
+  generateFunFacts(sessionData, nationality, sex, ageGroup, countryName) {
+    const facts = [];
+    const answers = sessionData.answers || [];
+    
+    // Analyze answers to generate insights
+    answers.forEach((answer, index) => {
+      if (answer.weights && answer.weights.nationality) {
+        const topCountries = Object.entries(answer.weights.nationality)
+          .sort((a, b) => b[1] - a[1])
+          .slice(0, 2);
+        
+        if (topCountries.length > 0 && topCountries[0][1] > 50) {
+          const countryCode = topCountries[0][0];
+          const weight = topCountries[0][1];
+          
+          if (countryCode === nationality) {
+            // This answer strongly indicated the correct country
+            facts.push(`Your choice "${answer.text}" is popular with ${weight}% of people in ${countryName}!`);
+          }
+        }
+      }
+      
+      // Add demographic insights
+      if (answer.weights && answer.weights.sex && answer.weights.sex[sex] > 60) {
+        facts.push(`"${answer.text}" is a choice that ${answer.weights.sex[sex]}% of ${sex}s prefer!`);
+      }
+      
+      if (answer.weights && answer.weights.age_group && answer.weights.age_group[ageGroup] > 60) {
+        const ageLabel = { child: 'kids', teen: 'teenagers', adult: 'adults', senior: 'seniors' }[ageGroup] || ageGroup;
+        facts.push(`"${answer.text}" is especially popular among ${ageLabel}!`);
+      }
+    });
+    
+    // Limit to top 5 most interesting facts
+    return facts.slice(0, 5);
   }
 
   /**

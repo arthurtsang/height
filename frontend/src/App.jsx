@@ -11,6 +11,7 @@ function App() {
     currentQuestion,
     progress,
     confidenceBreakdown,
+    hints,
     result,
     error,
     isLoading,
@@ -38,6 +39,7 @@ function App() {
             question={currentQuestion}
             progress={progress}
             confidenceBreakdown={confidenceBreakdown}
+            hints={hints}
             onAnswer={submitAnswer}
             isLoading={isLoading}
           />

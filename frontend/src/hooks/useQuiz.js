@@ -7,6 +7,7 @@ export function useQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [progress, setProgress] = useState(0);
   const [confidenceBreakdown, setConfidenceBreakdown] = useState(null);
+  const [hints, setHints] = useState(null);
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -22,6 +23,7 @@ export function useQuiz() {
                              (data.progress.current / data.progress.total) * 100;
       setProgress(progressPercent);
       setConfidenceBreakdown(data.progress.confidenceBreakdown || null);
+      setHints(data.progress.hints || null);
       setScreen('question');
     } catch (err) {
       setError('Failed to start quiz. Please try again.');
@@ -51,6 +53,7 @@ export function useQuiz() {
                                (data.progress.current / data.progress.total) * 100;
         setProgress(progressPercent);
         setConfidenceBreakdown(data.progress.confidenceBreakdown || null);
+        setHints(data.progress.hints || null);
       }
     } catch (err) {
       // Check if session expired (404 error)
@@ -77,6 +80,7 @@ export function useQuiz() {
     setCurrentQuestion(null);
     setProgress(0);
     setConfidenceBreakdown(null);
+    setHints(null);
     setResult(null);
     setError(null);
   };
@@ -87,6 +91,7 @@ export function useQuiz() {
     currentQuestion,
     progress,
     confidenceBreakdown,
+    hints,
     result,
     isLoading,
     error,

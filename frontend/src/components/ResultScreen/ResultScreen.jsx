@@ -4,6 +4,7 @@ import './ResultScreen.css';
 const ResultScreen = ({ result, onRestart }) => {
   const [showResult, setShowResult] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [showFunFacts, setShowFunFacts] = useState(false);
 
   useEffect(() => {
     // Animate result reveal
@@ -74,7 +75,41 @@ const ResultScreen = ({ result, onRestart }) => {
             </p>
           </div>
         )}
+        
+        {result.demographics && (
+          <div className="demographics-info">
+            <p>
+              Detected: <strong>{result.demographics.sex}</strong> • <strong>{result.demographics.ageGroup}</strong>
+            </p>
+          </div>
+        )}
       </div>
+
+      {result.funFacts && result.funFacts.length > 0 && (
+        <div className="fun-facts-section">
+          <button
+            className="fun-facts-toggle"
+            onClick={() => setShowFunFacts(!showFunFacts)}
+          >
+            <span className="toggle-icon">{showFunFacts ? '▼' : '▶'}</span>
+            <span className="toggle-text">How we figured it out</span>
+            <span className="fun-icon">🔍</span>
+          </button>
+          
+          {showFunFacts && (
+            <div className="fun-facts-content">
+              <ul className="fun-facts-list">
+                {result.funFacts.map((fact, index) => (
+                  <li key={index} className="fun-fact-item">
+                    <span className="fact-bullet">💡</span>
+                    <span className="fact-text">{fact}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="result-actions">
         <button className="share-button" onClick={handleShare}>
