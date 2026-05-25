@@ -17,6 +17,24 @@
         "male": 175.3,
         "female": 161.5,
         "overall": 168.4,
+        "byAge": {
+          "child": {
+            "male": 149,
+            "female": 137
+          },
+          "teen": {
+            "male": 170,
+            "female": 157
+          },
+          "adult": {
+            "male": 175,
+            "female": 162
+          },
+          "senior": {
+            "male": 172,
+            "female": 158
+          }
+        },
         "source": "CDC NHANES 2015-2018"
       },
       "statistics": {
@@ -65,6 +83,1451 @@
           "house": 0.62,
           "apartment": 0.3,
           "condo": 0.06,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "avgHeight": {
+        "male": 175.3,
+        "female": 161.9,
+        "overall": 168.60000000000002,
+        "byAge": {
+          "child": {
+            "male": 149,
+            "female": 138
+          },
+          "teen": {
+            "male": 170,
+            "female": 157
+          },
+          "adult": {
+            "male": 175,
+            "female": 162
+          },
+          "senior": {
+            "male": 172,
+            "female": 159
+          }
+        },
+        "source": "NHS Health Survey 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "curry": 0.22,
+          "pizza": 0.2,
+          "pasta": 0.15,
+          "burgers": 0.15,
+          "fishAndChips": 0.12,
+          "noodles": 0.08,
+          "tacos": 0.04,
+          "other": 0.04
+        },
+        "favoriteSports": {
+          "soccer": 0.45,
+          "cricket": 0.18,
+          "rugby": 0.15,
+          "tennis": 0.1,
+          "golf": 0.07,
+          "other": 0.05
+        },
+        "climatePreference": {
+          "cold": 0.45,
+          "moderate": 0.4,
+          "warm": 0.15
+        },
+        "beveragePreferences": {
+          "tea": 0.6,
+          "coffee": 0.3,
+          "beer": 0.06,
+          "other": 0.04
+        },
+        "primaryTransport": {
+          "car": 0.65,
+          "publicTransit": 0.2,
+          "walk": 0.1,
+          "bike": 0.05
+        },
+        "workStyle": {
+          "office": 0.45,
+          "hybrid": 0.35,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "house": 0.55,
+          "apartment": 0.35,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "avgHeight": {
+        "male": 171.6,
+        "female": 158.5,
+        "overall": 165.05,
+        "byAge": {
+          "child": {
+            "male": 146,
+            "female": 135
+          },
+          "teen": {
+            "male": 166,
+            "female": 154
+          },
+          "adult": {
+            "male": 172,
+            "female": 159
+          },
+          "senior": {
+            "male": 168,
+            "female": 155
+          }
+        },
+        "source": "Japanese Ministry of Health 2020"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "noodles": 0.35,
+          "sushi": 0.25,
+          "rice": 0.2,
+          "curry": 0.08,
+          "pizza": 0.05,
+          "burgers": 0.04,
+          "other": 0.03
+        },
+        "favoriteSports": {
+          "baseball": 0.35,
+          "soccer": 0.25,
+          "sumo": 0.15,
+          "basketball": 0.1,
+          "volleyball": 0.08,
+          "other": 0.07
+        },
+        "climatePreference": {
+          "moderate": 0.45,
+          "warm": 0.35,
+          "cold": 0.2
+        },
+        "beveragePreferences": {
+          "tea": 0.6,
+          "coffee": 0.25,
+          "sake": 0.1,
+          "other": 0.05
+        },
+        "primaryTransport": {
+          "publicTransit": 0.6,
+          "car": 0.25,
+          "bike": 0.1,
+          "walk": 0.05
+        },
+        "workStyle": {
+          "office": 0.55,
+          "hybrid": 0.25,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "apartment": 0.55,
+          "house": 0.35,
+          "condo": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "avgHeight": {
+        "male": 169.5,
+        "female": 158,
+        "overall": 163.75,
+        "byAge": {
+          "child": {
+            "male": 144,
+            "female": 134
+          },
+          "teen": {
+            "male": 164,
+            "female": 153
+          },
+          "adult": {
+            "male": 170,
+            "female": 158
+          },
+          "senior": {
+            "male": 166,
+            "female": 155
+          }
+        },
+        "source": "Chinese CDC 2020"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "noodles": 0.4,
+          "rice": 0.3,
+          "dumplings": 0.15,
+          "stirFry": 0.08,
+          "pizza": 0.03,
+          "burgers": 0.02,
+          "other": 0.02
+        },
+        "favoriteSports": {
+          "tableTennis": 0.3,
+          "basketball": 0.25,
+          "badminton": 0.2,
+          "soccer": 0.15,
+          "volleyball": 0.06,
+          "other": 0.04
+        },
+        "climatePreference": {
+          "moderate": 0.45,
+          "warm": 0.35,
+          "cold": 0.2
+        },
+        "beveragePreferences": {
+          "tea": 0.7,
+          "coffee": 0.15,
+          "milk": 0.08,
+          "other": 0.07
+        },
+        "primaryTransport": {
+          "publicTransit": 0.45,
+          "bike": 0.25,
+          "car": 0.2,
+          "walk": 0.1
+        },
+        "workStyle": {
+          "office": 0.65,
+          "hybrid": 0.15,
+          "remote": 0.1,
+          "outdoor": 0.1
+        },
+        "housingType": {
+          "apartment": 0.7,
+          "house": 0.2,
+          "condo": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "avgHeight": {
+        "male": 166.3,
+        "female": 152.6,
+        "overall": 159.45,
+        "byAge": {
+          "child": {
+            "male": 141,
+            "female": 130
+          },
+          "teen": {
+            "male": 161,
+            "female": 148
+          },
+          "adult": {
+            "male": 166,
+            "female": 153
+          },
+          "senior": {
+            "male": 163,
+            "female": 150
+          }
+        },
+        "source": "Indian Council of Medical Research 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "curry": 0.5,
+          "rice": 0.2,
+          "bread": 0.15,
+          "biryani": 0.08,
+          "pizza": 0.03,
+          "noodles": 0.02,
+          "other": 0.02
+        },
+        "favoriteSports": {
+          "cricket": 0.6,
+          "soccer": 0.15,
+          "badminton": 0.1,
+          "hockey": 0.08,
+          "kabaddi": 0.04,
+          "other": 0.03
+        },
+        "climatePreference": {
+          "warm": 0.65,
+          "moderate": 0.3,
+          "cold": 0.05
+        },
+        "beveragePreferences": {
+          "tea": 0.7,
+          "coffee": 0.15,
+          "milk": 0.1,
+          "other": 0.05
+        },
+        "primaryTransport": {
+          "publicTransit": 0.4,
+          "bike": 0.25,
+          "car": 0.2,
+          "walk": 0.15
+        },
+        "workStyle": {
+          "office": 0.65,
+          "hybrid": 0.15,
+          "remote": 0.1,
+          "outdoor": 0.1
+        },
+        "housingType": {
+          "apartment": 0.5,
+          "house": 0.4,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "avgHeight": {
+        "male": 183.8,
+        "female": 170.4,
+        "overall": 177.10000000000002,
+        "byAge": {
+          "child": {
+            "male": 156,
+            "female": 145
+          },
+          "teen": {
+            "male": 178,
+            "female": 165
+          },
+          "adult": {
+            "male": 184,
+            "female": 170
+          },
+          "senior": {
+            "male": 180,
+            "female": 167
+          }
+        },
+        "source": "Statistics Netherlands 2020"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "cheese": 0.25,
+          "pizza": 0.2,
+          "pasta": 0.18,
+          "burgers": 0.15,
+          "fries": 0.1,
+          "noodles": 0.06,
+          "other": 0.06
+        },
+        "favoriteSports": {
+          "soccer": 0.5,
+          "cycling": 0.2,
+          "hockey": 0.12,
+          "volleyball": 0.08,
+          "tennis": 0.06,
+          "other": 0.04
+        },
+        "climatePreference": {
+          "moderate": 0.5,
+          "warm": 0.3,
+          "cold": 0.2
+        },
+        "beveragePreferences": {
+          "coffee": 0.7,
+          "tea": 0.15,
+          "milk": 0.1,
+          "other": 0.05
+        },
+        "primaryTransport": {
+          "bike": 0.5,
+          "car": 0.3,
+          "publicTransit": 0.15,
+          "walk": 0.05
+        },
+        "workStyle": {
+          "office": 0.45,
+          "hybrid": 0.35,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "house": 0.55,
+          "apartment": 0.35,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "avgHeight": {
+        "male": 180.3,
+        "female": 166.2,
+        "overall": 173.25,
+        "byAge": {
+          "child": {
+            "male": 153,
+            "female": 141
+          },
+          "teen": {
+            "male": 175,
+            "female": 161
+          },
+          "adult": {
+            "male": 180,
+            "female": 166
+          },
+          "senior": {
+            "male": 177,
+            "female": 163
+          }
+        },
+        "source": "German Federal Statistical Office 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pizza": 0.22,
+          "pasta": 0.2,
+          "burgers": 0.18,
+          "sausage": 0.15,
+          "curry": 0.1,
+          "noodles": 0.08,
+          "other": 0.07
+        },
+        "favoriteSports": {
+          "soccer": 0.55,
+          "handball": 0.15,
+          "basketball": 0.1,
+          "tennis": 0.1,
+          "volleyball": 0.06,
+          "other": 0.04
+        },
+        "climatePreference": {
+          "moderate": 0.5,
+          "warm": 0.3,
+          "cold": 0.2
+        },
+        "beveragePreferences": {
+          "coffee": 0.65,
+          "tea": 0.2,
+          "beer": 0.1,
+          "other": 0.05
+        },
+        "primaryTransport": {
+          "car": 0.6,
+          "publicTransit": 0.25,
+          "bike": 0.1,
+          "walk": 0.05
+        },
+        "workStyle": {
+          "office": 0.55,
+          "hybrid": 0.25,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "apartment": 0.5,
+          "house": 0.4,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "avgHeight": {
+        "male": 175.6,
+        "female": 162.5,
+        "overall": 169.05,
+        "byAge": {
+          "child": {
+            "male": 149,
+            "female": 138
+          },
+          "teen": {
+            "male": 170,
+            "female": 158
+          },
+          "adult": {
+            "male": 176,
+            "female": 163
+          },
+          "senior": {
+            "male": 172,
+            "female": 159
+          }
+        },
+        "source": "French National Institute 2020"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pasta": 0.25,
+          "pizza": 0.22,
+          "cheese": 0.18,
+          "burgers": 0.12,
+          "croissant": 0.1,
+          "curry": 0.06,
+          "other": 0.07
+        },
+        "favoriteSports": {
+          "soccer": 0.45,
+          "tennis": 0.2,
+          "rugby": 0.15,
+          "basketball": 0.1,
+          "cycling": 0.06,
+          "other": 0.04
+        },
+        "climatePreference": {
+          "moderate": 0.5,
+          "warm": 0.3,
+          "cold": 0.2
+        },
+        "beveragePreferences": {
+          "coffee": 0.6,
+          "wine": 0.2,
+          "tea": 0.12,
+          "other": 0.08
+        },
+        "primaryTransport": {
+          "car": 0.65,
+          "publicTransit": 0.2,
+          "bike": 0.08,
+          "walk": 0.07
+        },
+        "workStyle": {
+          "office": 0.55,
+          "hybrid": 0.25,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "apartment": 0.5,
+          "house": 0.4,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "avgHeight": {
+        "male": 177.8,
+        "female": 162.9,
+        "overall": 170.35000000000002,
+        "byAge": {
+          "child": {
+            "male": 151,
+            "female": 138
+          },
+          "teen": {
+            "male": 172,
+            "female": 158
+          },
+          "adult": {
+            "male": 178,
+            "female": 163
+          },
+          "senior": {
+            "male": 174,
+            "female": 160
+          }
+        },
+        "source": "Italian National Institute 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pasta": 0.4,
+          "pizza": 0.35,
+          "risotto": 0.1,
+          "burgers": 0.06,
+          "noodles": 0.04,
+          "curry": 0.03,
+          "other": 0.02
+        },
+        "favoriteSports": {
+          "soccer": 0.6,
+          "volleyball": 0.15,
+          "basketball": 0.1,
+          "tennis": 0.08,
+          "cycling": 0.04,
+          "other": 0.03
+        },
+        "climatePreference": {
+          "warm": 0.55,
+          "moderate": 0.35,
+          "cold": 0.1
+        },
+        "beveragePreferences": {
+          "coffee": 0.75,
+          "wine": 0.12,
+          "tea": 0.08,
+          "other": 0.05
+        },
+        "primaryTransport": {
+          "car": 0.7,
+          "publicTransit": 0.15,
+          "bike": 0.08,
+          "walk": 0.07
+        },
+        "workStyle": {
+          "office": 0.55,
+          "hybrid": 0.25,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "apartment": 0.55,
+          "house": 0.35,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "ES",
+      "name": "Spain",
+      "avgHeight": {
+        "male": 176.1,
+        "female": 162.3,
+        "overall": 169.2,
+        "byAge": {
+          "child": {
+            "male": 150,
+            "female": 138
+          },
+          "teen": {
+            "male": 171,
+            "female": 157
+          },
+          "adult": {
+            "male": 176,
+            "female": 162
+          },
+          "senior": {
+            "male": 173,
+            "female": 159
+          }
+        },
+        "source": "Spanish National Statistics 2020"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "paella": 0.25,
+          "pizza": 0.22,
+          "pasta": 0.2,
+          "tapas": 0.15,
+          "burgers": 0.08,
+          "curry": 0.05,
+          "other": 0.05
+        },
+        "favoriteSports": {
+          "soccer": 0.65,
+          "basketball": 0.15,
+          "tennis": 0.1,
+          "cycling": 0.05,
+          "volleyball": 0.03,
+          "other": 0.02
+        },
+        "climatePreference": {
+          "warm": 0.55,
+          "moderate": 0.35,
+          "cold": 0.1
+        },
+        "beveragePreferences": {
+          "coffee": 0.6,
+          "wine": 0.2,
+          "tea": 0.12,
+          "other": 0.08
+        },
+        "primaryTransport": {
+          "car": 0.65,
+          "publicTransit": 0.2,
+          "walk": 0.1,
+          "bike": 0.05
+        },
+        "workStyle": {
+          "office": 0.55,
+          "hybrid": 0.25,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "apartment": 0.6,
+          "house": 0.3,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "avgHeight": {
+        "male": 175.1,
+        "female": 162.3,
+        "overall": 168.7,
+        "byAge": {
+          "child": {
+            "male": 149,
+            "female": 138
+          },
+          "teen": {
+            "male": 170,
+            "female": 157
+          },
+          "adult": {
+            "male": 175,
+            "female": 162
+          },
+          "senior": {
+            "male": 172,
+            "female": 159
+          }
+        },
+        "source": "Statistics Canada 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pizza": 0.25,
+          "burgers": 0.22,
+          "pasta": 0.15,
+          "tacos": 0.12,
+          "poutine": 0.1,
+          "sushi": 0.08,
+          "other": 0.08
+        },
+        "favoriteSports": {
+          "hockey": 0.4,
+          "soccer": 0.2,
+          "basketball": 0.15,
+          "football": 0.12,
+          "baseball": 0.08,
+          "other": 0.05
+        },
+        "climatePreference": {
+          "moderate": 0.4,
+          "warm": 0.35,
+          "cold": 0.25
+        },
+        "beveragePreferences": {
+          "coffee": 0.7,
+          "tea": 0.18,
+          "beer": 0.07,
+          "other": 0.05
+        },
+        "primaryTransport": {
+          "car": 0.8,
+          "publicTransit": 0.12,
+          "bike": 0.05,
+          "walk": 0.03
+        },
+        "workStyle": {
+          "office": 0.45,
+          "hybrid": 0.35,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "house": 0.6,
+          "apartment": 0.3,
+          "condo": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "avgHeight": {
+        "male": 175.6,
+        "female": 161.8,
+        "overall": 168.7,
+        "byAge": {
+          "child": {
+            "male": 149,
+            "female": 138
+          },
+          "teen": {
+            "male": 170,
+            "female": 157
+          },
+          "adult": {
+            "male": 176,
+            "female": 162
+          },
+          "senior": {
+            "male": 172,
+            "female": 159
+          }
+        },
+        "source": "Australian Bureau of Statistics 2018"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pizza": 0.25,
+          "burgers": 0.22,
+          "pasta": 0.18,
+          "sushi": 0.12,
+          "curry": 0.1,
+          "tacos": 0.06,
+          "other": 0.07
+        },
+        "favoriteSports": {
+          "cricket": 0.3,
+          "rugby": 0.25,
+          "soccer": 0.2,
+          "tennis": 0.12,
+          "swimming": 0.08,
+          "other": 0.05
+        },
+        "climatePreference": {
+          "warm": 0.55,
+          "moderate": 0.35,
+          "cold": 0.1
+        },
+        "beveragePreferences": {
+          "coffee": 0.65,
+          "tea": 0.2,
+          "beer": 0.1,
+          "other": 0.05
+        },
+        "primaryTransport": {
+          "car": 0.8,
+          "publicTransit": 0.12,
+          "bike": 0.05,
+          "walk": 0.03
+        },
+        "workStyle": {
+          "office": 0.55,
+          "hybrid": 0.25,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "house": 0.7,
+          "apartment": 0.22,
+          "flat": 0.06,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "MX",
+      "name": "Mexico",
+      "avgHeight": {
+        "male": 170.3,
+        "female": 157,
+        "overall": 163.65,
+        "byAge": {
+          "child": {
+            "male": 145,
+            "female": 133
+          },
+          "teen": {
+            "male": 165,
+            "female": 152
+          },
+          "adult": {
+            "male": 170,
+            "female": 157
+          },
+          "senior": {
+            "male": 167,
+            "female": 154
+          }
+        },
+        "source": "Mexican National Health Survey 2018"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "tacos": 0.45,
+          "burgers": 0.15,
+          "pizza": 0.12,
+          "tortas": 0.1,
+          "tamales": 0.08,
+          "pasta": 0.05,
+          "other": 0.05
+        },
+        "favoriteSports": {
+          "soccer": 0.7,
+          "boxing": 0.12,
+          "baseball": 0.08,
+          "basketball": 0.05,
+          "lucha": 0.03,
+          "other": 0.02
+        },
+        "climatePreference": {
+          "moderate": 0.4,
+          "warm": 0.35,
+          "cold": 0.25
+        },
+        "beveragePreferences": {
+          "coffee": 0.5,
+          "soda": 0.25,
+          "juice": 0.15,
+          "tea": 0.1
+        },
+        "primaryTransport": {
+          "car": 0.5,
+          "publicTransit": 0.3,
+          "walk": 0.15,
+          "bike": 0.05
+        },
+        "workStyle": {
+          "office": 0.55,
+          "hybrid": 0.25,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "house": 0.6,
+          "apartment": 0.3,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "avgHeight": {
+        "male": 173.6,
+        "female": 161.1,
+        "overall": 167.35,
+        "byAge": {
+          "child": {
+            "male": 148,
+            "female": 137
+          },
+          "teen": {
+            "male": 168,
+            "female": 156
+          },
+          "adult": {
+            "male": 174,
+            "female": 161
+          },
+          "senior": {
+            "male": 170,
+            "female": 158
+          }
+        },
+        "source": "Brazilian Institute of Geography 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "rice": 0.3,
+          "pizza": 0.2,
+          "burgers": 0.15,
+          "pasta": 0.12,
+          "feijoada": 0.1,
+          "tacos": 0.06,
+          "other": 0.07
+        },
+        "favoriteSports": {
+          "soccer": 0.75,
+          "volleyball": 0.1,
+          "basketball": 0.06,
+          "jujitsu": 0.04,
+          "tennis": 0.03,
+          "other": 0.02
+        },
+        "climatePreference": {
+          "warm": 0.6,
+          "moderate": 0.3,
+          "cold": 0.1
+        },
+        "beveragePreferences": {
+          "coffee": 0.6,
+          "juice": 0.2,
+          "soda": 0.12,
+          "tea": 0.08
+        },
+        "primaryTransport": {
+          "car": 0.5,
+          "publicTransit": 0.3,
+          "walk": 0.12,
+          "bike": 0.08
+        },
+        "workStyle": {
+          "office": 0.65,
+          "hybrid": 0.15,
+          "remote": 0.1,
+          "outdoor": 0.1
+        },
+        "housingType": {
+          "apartment": 0.5,
+          "house": 0.4,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "avgHeight": {
+        "male": 174.9,
+        "female": 162.3,
+        "overall": 168.60000000000002,
+        "byAge": {
+          "child": {
+            "male": 149,
+            "female": 138
+          },
+          "teen": {
+            "male": 170,
+            "female": 157
+          },
+          "adult": {
+            "male": 175,
+            "female": 162
+          },
+          "senior": {
+            "male": 171,
+            "female": 159
+          }
+        },
+        "source": "Korean CDC 2020"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "noodles": 0.3,
+          "rice": 0.25,
+          "kimchi": 0.2,
+          "bbq": 0.12,
+          "pizza": 0.06,
+          "burgers": 0.04,
+          "other": 0.03
+        },
+        "favoriteSports": {
+          "soccer": 0.35,
+          "baseball": 0.3,
+          "basketball": 0.15,
+          "taekwondo": 0.1,
+          "volleyball": 0.06,
+          "other": 0.04
+        },
+        "climatePreference": {
+          "moderate": 0.45,
+          "warm": 0.35,
+          "cold": 0.2
+        },
+        "beveragePreferences": {
+          "coffee": 0.55,
+          "tea": 0.25,
+          "soju": 0.12,
+          "other": 0.08
+        },
+        "primaryTransport": {
+          "publicTransit": 0.55,
+          "car": 0.3,
+          "walk": 0.1,
+          "bike": 0.05
+        },
+        "workStyle": {
+          "office": 0.55,
+          "hybrid": 0.25,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "apartment": 0.65,
+          "house": 0.25,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "avgHeight": {
+        "male": 180.5,
+        "female": 166.9,
+        "overall": 173.7,
+        "byAge": {
+          "child": {
+            "male": 153,
+            "female": 142
+          },
+          "teen": {
+            "male": 175,
+            "female": 162
+          },
+          "adult": {
+            "male": 181,
+            "female": 167
+          },
+          "senior": {
+            "male": 177,
+            "female": 164
+          }
+        },
+        "source": "Statistics Sweden 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pizza": 0.25,
+          "pasta": 0.2,
+          "burgers": 0.18,
+          "meatballs": 0.15,
+          "fish": 0.1,
+          "curry": 0.06,
+          "other": 0.06
+        },
+        "favoriteSports": {
+          "soccer": 0.4,
+          "hockey": 0.3,
+          "skiing": 0.15,
+          "handball": 0.08,
+          "tennis": 0.04,
+          "other": 0.03
+        },
+        "climatePreference": {
+          "cold": 0.45,
+          "moderate": 0.4,
+          "warm": 0.15
+        },
+        "beveragePreferences": {
+          "coffee": 0.8,
+          "tea": 0.12,
+          "milk": 0.05,
+          "other": 0.03
+        },
+        "primaryTransport": {
+          "car": 0.6,
+          "publicTransit": 0.2,
+          "bike": 0.15,
+          "walk": 0.05
+        },
+        "workStyle": {
+          "office": 0.45,
+          "hybrid": 0.35,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "apartment": 0.5,
+          "house": 0.4,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "avgHeight": {
+        "male": 179.7,
+        "female": 166.6,
+        "overall": 173.14999999999998,
+        "byAge": {
+          "child": {
+            "male": 153,
+            "female": 142
+          },
+          "teen": {
+            "male": 174,
+            "female": 162
+          },
+          "adult": {
+            "male": 180,
+            "female": 167
+          },
+          "senior": {
+            "male": 176,
+            "female": 163
+          }
+        },
+        "source": "Statistics Norway 2020"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pizza": 0.25,
+          "pasta": 0.2,
+          "burgers": 0.18,
+          "fish": 0.15,
+          "meatballs": 0.1,
+          "curry": 0.06,
+          "other": 0.06
+        },
+        "favoriteSports": {
+          "soccer": 0.35,
+          "skiing": 0.3,
+          "handball": 0.15,
+          "hockey": 0.1,
+          "cycling": 0.06,
+          "other": 0.04
+        },
+        "climatePreference": {
+          "cold": 0.45,
+          "moderate": 0.4,
+          "warm": 0.15
+        },
+        "beveragePreferences": {
+          "coffee": 0.75,
+          "tea": 0.15,
+          "milk": 0.06,
+          "other": 0.04
+        },
+        "primaryTransport": {
+          "car": 0.65,
+          "publicTransit": 0.18,
+          "bike": 0.12,
+          "walk": 0.05
+        },
+        "workStyle": {
+          "office": 0.45,
+          "hybrid": 0.35,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "house": 0.55,
+          "apartment": 0.35,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "avgHeight": {
+        "male": 181.4,
+        "female": 167.2,
+        "overall": 174.3,
+        "byAge": {
+          "child": {
+            "male": 154,
+            "female": 142
+          },
+          "teen": {
+            "male": 176,
+            "female": 162
+          },
+          "adult": {
+            "male": 181,
+            "female": 167
+          },
+          "senior": {
+            "male": 178,
+            "female": 164
+          }
+        },
+        "source": "Statistics Denmark 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "pizza": 0.25,
+          "pasta": 0.2,
+          "burgers": 0.18,
+          "openSandwich": 0.15,
+          "fish": 0.1,
+          "curry": 0.06,
+          "other": 0.06
+        },
+        "favoriteSports": {
+          "soccer": 0.45,
+          "handball": 0.25,
+          "cycling": 0.15,
+          "badminton": 0.08,
+          "swimming": 0.04,
+          "other": 0.03
+        },
+        "climatePreference": {
+          "cold": 0.45,
+          "moderate": 0.4,
+          "warm": 0.15
+        },
+        "beveragePreferences": {
+          "coffee": 0.75,
+          "tea": 0.15,
+          "beer": 0.06,
+          "other": 0.04
+        },
+        "primaryTransport": {
+          "bike": 0.45,
+          "car": 0.35,
+          "publicTransit": 0.15,
+          "walk": 0.05
+        },
+        "workStyle": {
+          "office": 0.45,
+          "hybrid": 0.35,
+          "remote": 0.15,
+          "outdoor": 0.05
+        },
+        "housingType": {
+          "house": 0.5,
+          "apartment": 0.4,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
+      "avgHeight": {
+        "male": 169.6,
+        "female": 157.4,
+        "overall": 163.5,
+        "byAge": {
+          "child": {
+            "male": 144,
+            "female": 134
+          },
+          "teen": {
+            "male": 165,
+            "female": 153
+          },
+          "adult": {
+            "male": 170,
+            "female": 157
+          },
+          "senior": {
+            "male": 166,
+            "female": 154
+          }
+        },
+        "source": "Thai Ministry of Health 2019"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "noodles": 0.4,
+          "rice": 0.3,
+          "curry": 0.15,
+          "stirFry": 0.08,
+          "pizza": 0.03,
+          "burgers": 0.02,
+          "other": 0.02
+        },
+        "favoriteSports": {
+          "soccer": 0.4,
+          "muayThai": 0.25,
+          "volleyball": 0.15,
+          "badminton": 0.1,
+          "basketball": 0.06,
+          "other": 0.04
+        },
+        "climatePreference": {
+          "warm": 0.65,
+          "moderate": 0.3,
+          "cold": 0.05
+        },
+        "beveragePreferences": {
+          "tea": 0.5,
+          "coffee": 0.3,
+          "juice": 0.12,
+          "other": 0.08
+        },
+        "primaryTransport": {
+          "bike": 0.4,
+          "car": 0.3,
+          "publicTransit": 0.2,
+          "walk": 0.1
+        },
+        "workStyle": {
+          "office": 0.65,
+          "hybrid": 0.15,
+          "remote": 0.1,
+          "outdoor": 0.1
+        },
+        "housingType": {
+          "house": 0.55,
+          "apartment": 0.35,
+          "flat": 0.08,
+          "other": 0.02
+        }
+      }
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "avgHeight": {
+        "male": 174.5,
+        "female": 161,
+        "overall": 167.75,
+        "byAge": {
+          "child": {
+            "male": 148,
+            "female": 137
+          },
+          "teen": {
+            "male": 169,
+            "female": 156
+          },
+          "adult": {
+            "male": 175,
+            "female": 161
+          },
+          "senior": {
+            "male": 171,
+            "female": 158
+          }
+        },
+        "source": "Argentine Ministry of Health 2018"
+      },
+      "statistics": {
+        "favoriteFoods": {
+          "asado": 0.3,
+          "pizza": 0.25,
+          "pasta": 0.2,
+          "empanadas": 0.12,
+          "burgers": 0.06,
+          "tacos": 0.04,
+          "other": 0.03
+        },
+        "favoriteSports": {
+          "soccer": 0.75,
+          "rugby": 0.1,
+          "basketball": 0.06,
+          "tennis": 0.05,
+          "polo": 0.02,
+          "other": 0.02
+        },
+        "climatePreference": {
+          "warm": 0.6,
+          "moderate": 0.3,
+          "cold": 0.1
+        },
+        "beveragePreferences": {
+          "mate": 0.4,
+          "coffee": 0.35,
+          "wine": 0.15,
+          "other": 0.1
+        },
+        "primaryTransport": {
+          "car": 0.55,
+          "publicTransit": 0.3,
+          "walk": 0.1,
+          "bike": 0.05
+        },
+        "workStyle": {
+          "office": 0.65,
+          "hybrid": 0.15,
+          "remote": 0.1,
+          "outdoor": 0.1
+        },
+        "housingType": {
+          "apartment": 0.55,
+          "house": 0.35,
+          "flat": 0.08,
           "other": 0.02
         }
       }

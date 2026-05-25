@@ -214,6 +214,27 @@ class InferenceService {
   }
 
   /**
+   * Get most likely value from any attribute distribution
+   * Generic version of getMostLikelyCountry for any attribute
+   *
+   * @param {Object} distribution - Probability distribution
+   * @returns {string} Value with highest probability
+   */
+  getMostLikelyValue(distribution) {
+    let maxProb = 0;
+    let mostLikely = null;
+    
+    for (const [value, prob] of Object.entries(distribution)) {
+      if (prob > maxProb) {
+        maxProb = prob;
+        mostLikely = value;
+      }
+    }
+    
+    return mostLikely;
+  }
+
+  /**
    * Select next question based on information gain
    * 
    * @param {Array<Object>} availableQuestions - Questions not yet asked

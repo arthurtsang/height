@@ -58,15 +58,6 @@ class QuestionService {
   }
 
   /**
-   * Get questions by phase
-   * @param {string} phase - 'nationality' or 'height_relative'
-   * @returns {Array} Questions for the phase
-   */
-  getQuestionsByPhase(phase) {
-    return this.questions.filter(q => q.phase === phase);
-  }
-
-  /**
    * Get question by ID
    * @param {string} questionId - Question ID
    * @returns {object} Question object
@@ -80,53 +71,128 @@ class QuestionService {
   }
 
   /**
-   * Select next question using information gain
-   * @param {string} phase - Current phase ('nationality' or 'height_relative')
+   * Select next question using unified information gain across all attributes
    * @param {Array<string>} askedQuestionIds - Already asked question IDs
-   * @param {object} currentDistribution - Current probability distribution (for nationality phase)
+   * @param {object} attributeDistributions - Current distributions for all attributes
    * @param {Array<string>} recentCategories - Recently asked categories
    * @returns {object|null} Next question or null if no more questions
    */
-  selectNextQuestion(phase, askedQuestionIds, currentDistribution = null, recentCategories = []) {
+  selectNextQuestion(askedQuestionIds, attributeDistributions, recentCategories = []) {
     try {
-      // Get available questions for this phase
-      const phaseQuestions = this.getQuestionsByPhase(phase);
-      const availableQuestions = phaseQuestions.filter(q => !askedQuestionIds.includes(q.id));
+      // Get available questions
+      const availableQuestions = this.questions.filter(q => !askedQuestionIds.includes(q.id));
 
       if (availableQuestions.length === 0) {
-        logger.warn('No more questions available', { phase, askedCount: askedQuestionIds.length });
+        logger.warn('No more questions available', { askedCount: askedQuestionIds.length });
         return null;
       }
 
-      // For nationality phase, use information gain
-      if (phase === 'nationality' && currentDistribution) {
-        return inferenceService.selectNextQuestion(
-          availableQuestions,
-          currentDistribution,
-          recentCategories
-        );
-      }
+      // Calculate information gain for each question across all attributes
+      const questionsWithIG = availableQuestions.map(question => {
+        let maxIG = 0;
+        let bestAttribute = null;
 
-      // For height phase, select by precomputed IG or randomly
-      if (phase === 'height_relative') {
-        // Sort by precomputed information gain if available
-        const sorted = availableQuestions.sort((a, b) => {
-          const igA = a.precomputedIG || 0;
-          const igB = b.precomputedIG || 0;
-          return igB - igA;
-        });
-        
-        // Add some randomness to top questions
-        const topQuestions = sorted.slice(0, Math.min(3, sorted.length));
-        return topQuestions[Math.floor(Math.random() * topQuestions.length)];
-      }
+        // Check IG for each attribute
+        for (const [attribute, distribution] of Object.entries(attributeDistributions)) {
+          const ig = this.calculateQuestionIG(question, distribution, attribute);
+          if (ig > maxIG) {
+            maxIG = ig;
+            bestAttribute = attribute;
+          }
+        }
 
-      // Fallback: random selection
-      return availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+        return {
+          question,
+          informationGain: maxIG,
+          bestAttribute,
+          category: question.category
+        };
+      });
+
+      // Sort by information gain
+      questionsWithIG.sort((a, b) => b.informationGain - a.informationGain);
+
+      // Apply diversity penalty for recently used categories
+      const diversityWeight = 0.2;
+      questionsWithIG.forEach(item => {
+        if (recentCategories.includes(item.category)) {
+          const penalty = recentCategories.indexOf(item.category) + 1;
+          item.informationGain *= (1 - diversityWeight * (penalty / recentCategories.length));
+        }
+      });
+
+      // Re-sort after diversity adjustment
+      questionsWithIG.sort((a, b) => b.informationGain - a.informationGain);
+
+      // Add some randomness to top 3 questions
+      const topQuestions = questionsWithIG.slice(0, Math.min(3, questionsWithIG.length));
+      const selected = topQuestions[Math.floor(Math.random() * topQuestions.length)];
+
+      logger.info('Selected question', {
+        questionId: selected.question.id,
+        informationGain: selected.informationGain.toFixed(3),
+        bestAttribute: selected.bestAttribute,
+        category: selected.category
+      });
+
+      return selected.question;
     } catch (error) {
-      logger.error('Error selecting next question', { error: error.message, phase });
+      logger.error('Error selecting next question', { error: error.message });
       throw error;
     }
+  }
+
+  /**
+   * Calculate information gain for a question on a specific attribute
+   * @param {object} question - Question object
+   * @param {object} distribution - Current probability distribution for the attribute
+   * @param {string} attribute - Attribute name (nationality, sex, age_group, height_deviation)
+   * @returns {number} Information gain
+   */
+  calculateQuestionIG(question, distribution, attribute) {
+    // Current entropy
+    const currentEntropy = inferenceService.calculateEntropy(distribution);
+
+    // Calculate expected entropy after asking this question
+    let expectedEntropy = 0;
+    const totalProb = Object.values(distribution).reduce((sum, p) => sum + p, 0);
+
+    question.options.forEach(option => {
+      // Get weights for this attribute from the option
+      const weights = option.weights?.[attribute] || {};
+      
+      if (Object.keys(weights).length === 0) {
+        return; // Skip if no weights for this attribute
+      }
+
+      // Simulate posterior distribution for this answer
+      const posterior = {};
+      let posteriorSum = 0;
+
+      for (const [value, prior] of Object.entries(distribution)) {
+        const weight = weights[value] || 0;
+        // Bayesian update: posterior ∝ prior × likelihood
+        posterior[value] = prior * (weight / 100);
+        posteriorSum += posterior[value];
+      }
+
+      // Normalize
+      if (posteriorSum > 0) {
+        for (const value in posterior) {
+          posterior[value] /= posteriorSum;
+        }
+      }
+
+      // Calculate entropy of this posterior
+      const posteriorEntropy = inferenceService.calculateEntropy(posterior);
+
+      // Weight by probability of choosing this answer (assume uniform for now)
+      const answerProb = 1 / question.options.length;
+      expectedEntropy += answerProb * posteriorEntropy;
+    });
+
+    // Information gain = current entropy - expected entropy
+    return Math.max(0, currentEntropy - expectedEntropy);
   }
 
   /**
@@ -147,12 +213,12 @@ class QuestionService {
   }
 
   /**
-   * Get answer details for nationality phase
+   * Get answer details with multi-attribute weights
    * @param {string} questionId - Question ID
    * @param {string} answerId - Answer ID
-   * @returns {object} Answer details with country weights
+   * @returns {object} Answer details with weights for all attributes
    */
-  getAnswerDetailsNationality(questionId, answerId) {
+  getAnswerDetails(questionId, answerId) {
     const question = this.getQuestionById(questionId);
     const answer = question.options.find(opt => opt.id === answerId);
     
@@ -164,30 +230,12 @@ class QuestionService {
       questionId,
       answerId,
       category: question.category,
-      countryWeights: answer.countryWeights || {}
-    };
-  }
-
-  /**
-   * Get answer details for height phase
-   * @param {string} questionId - Question ID
-   * @param {string} answerId - Answer ID
-   * @returns {object} Answer details with height adjustment
-   */
-  getAnswerDetailsHeight(questionId, answerId) {
-    const question = this.getQuestionById(questionId);
-    const answer = question.options.find(opt => opt.id === answerId);
-    
-    if (!answer) {
-      throw new Error(`Answer not found: ${answerId} for question ${questionId}`);
-    }
-
-    return {
-      questionId,
-      answerId,
-      category: question.category,
-      heightAdjustment: answer.heightAdjustment || 0,
-      confidence: answer.confidence || 0.5
+      weights: answer.weights || {
+        nationality: {},
+        sex: {},
+        age_group: {},
+        height_deviation: {}
+      }
     };
   }
 
@@ -200,12 +248,17 @@ class QuestionService {
   }
 
   /**
-   * Get question count by phase
-   * @param {string} phase - Phase name
-   * @returns {number} Question count
+   * Get questions that can help determine a specific attribute
+   * @param {string} attribute - Attribute name
+   * @returns {Array} Questions with weights for this attribute
    */
-  getQuestionCountByPhase(phase) {
-    return this.questions.filter(q => q.phase === phase).length;
+  getQuestionsForAttribute(attribute) {
+    return this.questions.filter(q => {
+      return q.options.some(opt => {
+        const weights = opt.weights?.[attribute];
+        return weights && Object.keys(weights).length > 0;
+      });
+    });
   }
 }
 

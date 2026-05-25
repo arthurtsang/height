@@ -36,6 +36,96 @@ class HeightService {
   }
 
   /**
+   * Calculate height from determined attributes using country statistics
+   * @param {string} nationality - Country code (e.g., 'US', 'GB', 'JP')
+   * @param {string} sex - 'male' or 'female'
+   * @param {string} ageGroup - 'child', 'teen', 'adult', or 'senior'
+   * @param {string} heightDeviation - 'way_below', 'below', 'average', 'above', 'way_above'
+   * @param {object} countryStats - Country statistics data
+   * @returns {number} Predicted height in centimeters
+   */
+  calculateHeightFromAttributes(nationality, sex, ageGroup, heightDeviation, countryStats) {
+    try {
+      // Find country data
+      const countryData = countryStats.countries.find(c => c.code === nationality);
+      
+      if (!countryData) {
+        logger.warn('Country not found, using global average', { nationality });
+        // Fallback to global average
+        const baseHeight = sex === 'male' ? 171 : 159;
+        return this.applyHeightDeviation(baseHeight, heightDeviation);
+      }
+
+      // Get base height from country statistics
+      let baseHeight;
+      if (countryData.avgHeight.byAge && countryData.avgHeight.byAge[ageGroup]) {
+        // Use age and sex specific height
+        baseHeight = countryData.avgHeight.byAge[ageGroup][sex];
+      } else if (countryData.avgHeight[sex]) {
+        // Fallback to sex-specific average
+        baseHeight = countryData.avgHeight[sex];
+      } else {
+        // Fallback to overall average
+        baseHeight = countryData.avgHeight.overall || 170;
+      }
+
+      logger.info('Base height determined from attributes', {
+        nationality,
+        sex,
+        ageGroup,
+        baseHeight
+      });
+
+      // Apply height deviation adjustment
+      const finalHeight = this.applyHeightDeviation(baseHeight, heightDeviation);
+
+      logger.info('Final height calculated from attributes', {
+        nationality,
+        sex,
+        ageGroup,
+        heightDeviation,
+        baseHeight,
+        finalHeight
+      });
+
+      return finalHeight;
+    } catch (error) {
+      logger.error('Error calculating height from attributes', { error: error.message });
+      throw error;
+    }
+  }
+
+  /**
+   * Apply height deviation adjustment to base height
+   * @param {number} baseHeight - Base height in cm
+   * @param {string} heightDeviation - Deviation category
+   * @returns {number} Adjusted height in cm
+   */
+  applyHeightDeviation(baseHeight, heightDeviation) {
+    // Deviation adjustments based on category
+    const adjustments = {
+      'way_below': -20,
+      'below': -10,
+      'average': 0,
+      'above': 10,
+      'way_above': 20
+    };
+
+    const adjustment = adjustments[heightDeviation] || 0;
+    
+    // Add small random factor for variety (±2cm)
+    const randomFactor = Math.random() * 4 - 2;
+    
+    // Calculate final height
+    let finalHeight = baseHeight + adjustment + randomFactor;
+    
+    // Clamp to reasonable range (147cm to 208cm / 4'10" to 6'10")
+    finalHeight = Math.max(147, Math.min(208, finalHeight));
+    
+    return Math.round(finalHeight);
+  }
+
+  /**
    * Calculate height based on user answers (legacy method for backward compatibility)
    * @param {Array} answers - Array of answer objects with questionId and score/baseHeight
    * @returns {number} Predicted height in centimeters

@@ -6,6 +6,7 @@ export function useQuiz() {
   const [sessionId, setSessionId] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(null);
   const [progress, setProgress] = useState(0);
+  const [confidenceBreakdown, setConfidenceBreakdown] = useState(null);
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -17,8 +18,10 @@ export function useQuiz() {
       const data = await api.startSession();
       setSessionId(data.session_id);
       setCurrentQuestion(data.question);
-      const progressPercent = (data.progress.current / data.progress.total) * 100;
+      const progressPercent = data.progress.averageConfidence ||
+                             (data.progress.current / data.progress.total) * 100;
       setProgress(progressPercent);
+      setConfidenceBreakdown(data.progress.confidenceBreakdown || null);
       setScreen('question');
     } catch (err) {
       setError('Failed to start quiz. Please try again.');
@@ -44,8 +47,10 @@ export function useQuiz() {
       } else {
         // More questions to go
         setCurrentQuestion(data.next_question);
-        const progressPercent = (data.progress.current / data.progress.total) * 100;
+        const progressPercent = data.progress.averageConfidence ||
+                               (data.progress.current / data.progress.total) * 100;
         setProgress(progressPercent);
+        setConfidenceBreakdown(data.progress.confidenceBreakdown || null);
       }
     } catch (err) {
       setError('Failed to submit answer. Please try again.');
@@ -60,6 +65,7 @@ export function useQuiz() {
     setSessionId(null);
     setCurrentQuestion(null);
     setProgress(0);
+    setConfidenceBreakdown(null);
     setResult(null);
     setError(null);
   };
@@ -69,6 +75,7 @@ export function useQuiz() {
     sessionId,
     currentQuestion,
     progress,
+    confidenceBreakdown,
     result,
     isLoading,
     error,

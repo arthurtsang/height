@@ -136,7 +136,7 @@ async function collectCountryData(country, apiManager) {
 
 /**
  * Get average height data from WHO/health agencies
- * 
+ *
  * Data sources:
  * - NCD Risk Factor Collaboration (2016 study)
  * - WHO Global Health Observatory
@@ -147,26 +147,27 @@ async function getHeightData(country) {
   
   // Known height data from NCD Risk Factor Collaboration 2016 study
   // This is real published data that should be updated periodically
+  // Includes age-specific data based on growth patterns and aging effects
   const heightDatabase = {
     'US': { male: 175.3, female: 161.5, source: 'CDC NHANES 2015-2018' },
     'GB': { male: 175.3, female: 161.9, source: 'NHS Health Survey 2019' },
-    'JP': { male: 171.0, female: 158.0, source: 'Japanese Ministry of Health 2020' },
+    'JP': { male: 171.6, female: 158.5, source: 'Japanese Ministry of Health 2020' },
     'CN': { male: 169.5, female: 158.0, source: 'Chinese CDC 2020' },
-    'IN': { male: 164.9, female: 152.6, source: 'Indian Council of Medical Research 2019' },
+    'IN': { male: 166.3, female: 152.6, source: 'Indian Council of Medical Research 2019' },
     'NL': { male: 183.8, female: 170.4, source: 'Statistics Netherlands 2020' },
-    'DE': { male: 180.3, female: 166.9, source: 'German Federal Statistical Office 2019' },
+    'DE': { male: 180.3, female: 166.2, source: 'German Federal Statistical Office 2019' },
     'FR': { male: 175.6, female: 162.5, source: 'French National Institute 2020' },
-    'IT': { male: 177.8, female: 164.6, source: 'Italian National Institute 2019' },
-    'ES': { male: 176.1, female: 162.9, source: 'Spanish National Statistics 2020' },
+    'IT': { male: 177.8, female: 162.9, source: 'Italian National Institute 2019' },
+    'ES': { male: 176.1, female: 162.3, source: 'Spanish National Statistics 2020' },
     'CA': { male: 175.1, female: 162.3, source: 'Statistics Canada 2019' },
     'AU': { male: 175.6, female: 161.8, source: 'Australian Bureau of Statistics 2018' },
-    'MX': { male: 170.0, female: 157.0, source: 'Mexican National Health Survey 2018' },
-    'BR': { male: 173.0, female: 160.9, source: 'Brazilian Institute of Geography 2019' },
+    'MX': { male: 170.3, female: 157.0, source: 'Mexican National Health Survey 2018' },
+    'BR': { male: 173.6, female: 161.1, source: 'Brazilian Institute of Geography 2019' },
     'KR': { male: 174.9, female: 162.3, source: 'Korean CDC 2020' },
     'SE': { male: 180.5, female: 166.9, source: 'Statistics Sweden 2019' },
     'NO': { male: 179.7, female: 166.6, source: 'Statistics Norway 2020' },
     'DK': { male: 181.4, female: 167.2, source: 'Statistics Denmark 2019' },
-    'TH': { male: 170.0, female: 157.9, source: 'Thai Ministry of Health 2019' },
+    'TH': { male: 169.6, female: 157.4, source: 'Thai Ministry of Health 2019' },
     'AR': { male: 174.5, female: 161.0, source: 'Argentine Ministry of Health 2018' }
   };
   
@@ -175,10 +176,35 @@ async function getHeightData(country) {
     throw new Error(`No height data available for ${country.code}`);
   }
   
+  // Calculate age-specific heights based on growth patterns
+  // Children (8-12): ~85% of adult height
+  // Teens (13-17): ~97% of adult height
+  // Adults (18-64): 100% (peak height)
+  // Seniors (65+): ~98% (slight height loss with age)
+  const byAge = {
+    child: {
+      male: Math.round(heightData.male * 0.85),
+      female: Math.round(heightData.female * 0.85)
+    },
+    teen: {
+      male: Math.round(heightData.male * 0.97),
+      female: Math.round(heightData.female * 0.97)
+    },
+    adult: {
+      male: Math.round(heightData.male),
+      female: Math.round(heightData.female)
+    },
+    senior: {
+      male: Math.round(heightData.male * 0.98),
+      female: Math.round(heightData.female * 0.98)
+    }
+  };
+  
   return {
     male: heightData.male,
     female: heightData.female,
     overall: (heightData.male + heightData.female) / 2,
+    byAge: byAge,
     source: heightData.source
   };
 }

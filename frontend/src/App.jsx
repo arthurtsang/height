@@ -10,6 +10,7 @@ function App() {
     screen,
     currentQuestion,
     progress,
+    confidenceBreakdown,
     result,
     error,
     isLoading,
@@ -36,6 +37,7 @@ function App() {
           <QuestionScreen
             question={currentQuestion}
             progress={progress}
+            confidenceBreakdown={confidenceBreakdown}
             onAnswer={submitAnswer}
             isLoading={isLoading}
           />

@@ -1,16 +1,31 @@
 import React from 'react';
 import './QuestionScreen.css';
 
-const QuestionScreen = ({ question, progress, onAnswer, isLoading }) => {
+const QuestionScreen = ({ question, progress, confidenceBreakdown, onAnswer, isLoading }) => {
   if (!question) return null;
 
   return (
     <div className="question-screen">
       <div className="progress-bar">
         <div className="progress-fill" style={{ width: `${progress}%` }}>
-          <span className="progress-text">{Math.round(progress)}%</span>
+          <span className="progress-text">
+            {confidenceBreakdown ? (
+              `Progress: ${Math.round(progress)}% confident`
+            ) : (
+              `${Math.round(progress)}%`
+            )}
+          </span>
         </div>
       </div>
+      
+      {confidenceBreakdown && (
+        <div className="confidence-breakdown">
+          <span className="breakdown-item">Nationality: {confidenceBreakdown.nationality}%</span>
+          <span className="breakdown-item">Sex: {confidenceBreakdown.sex}%</span>
+          <span className="breakdown-item">Age: {confidenceBreakdown.age}%</span>
+          <span className="breakdown-item">Height: {confidenceBreakdown.height}%</span>
+        </div>
+      )}
 
       <div className="question-content">
         <div className="question-number">
