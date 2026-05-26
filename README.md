@@ -1,4 +1,4 @@
-# Height Prediction Quiz
+# Height Prediction Quiz (107 Bobcoins used)
 
 A sophisticated, interactive web application that predicts your height using statistical inference and real-world data. The app uses subtle questions about preferences, lifestyle, and demographics to determine your nationality, age, sex, and height category through Bayesian probability analysis.
 
