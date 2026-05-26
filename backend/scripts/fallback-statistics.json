@@ -1,964 +1,998 @@
 {
   "US": {
     "food": {
-      "pizza": 0.28,
-      "burgers": 0.24,
-      "tacos": 0.15,
-      "pasta": 0.12,
+      "pizza": 0.15,
+      "burger": 0.20,
       "sushi": 0.08,
+      "pasta": 0.10,
+      "tacos": 0.15,
       "curry": 0.05,
-      "noodles": 0.04,
-      "other": 0.04
+      "steak": 0.12,
+      "ramen": 0.05,
+      "bbq": 0.10
     },
     "sports": {
-      "football": 0.37,
+      "football": 0.30,
       "basketball": 0.25,
-      "baseball": 0.18,
+      "baseball": 0.20,
       "soccer": 0.10,
-      "hockey": 0.05,
-      "other": 0.05
+      "hockey": 0.08,
+      "cricket": 0.02,
+      "rugby": 0.05
     },
     "climate": {
-      "warm": 0.45,
-      "moderate": 0.35,
-      "cold": 0.20
+      "cold": 0.20,
+      "temperate": 0.50,
+      "hot": 0.30
     },
     "beverage": {
-      "coffee": 0.65,
-      "tea": 0.20,
-      "soda": 0.10,
-      "juice": 0.05
+      "coffee": 0.60,
+      "tea": 0.25,
+      "other": 0.15
     },
     "transport": {
-      "car": 0.85,
-      "publicTransit": 0.08,
-      "bike": 0.04,
-      "walk": 0.03
+      "car": 0.75,
+      "bicycle": 0.02,
+      "publicTransport": 0.10,
+      "walk": 0.13
     },
     "workStyle": {
-      "office": 0.55,
+      "office": 0.60,
       "remote": 0.25,
-      "hybrid": 0.15,
-      "outdoor": 0.05
+      "hybrid": 0.15
     },
     "housing": {
-      "house": 0.62,
+      "house": 0.65,
       "apartment": 0.30,
-      "condo": 0.06,
-      "other": 0.02
+      "other": 0.05
     }
   },
   "GB": {
     "food": {
-      "curry": 0.22,
-      "pizza": 0.20,
-      "pasta": 0.15,
-      "burgers": 0.15,
-      "fishAndChips": 0.12,
-      "noodles": 0.08,
-      "tacos": 0.04,
-      "other": 0.04
-    },
-    "sports": {
-      "soccer": 0.45,
-      "cricket": 0.18,
-      "rugby": 0.15,
-      "tennis": 0.10,
-      "golf": 0.07,
-      "other": 0.05
-    },
-    "climate": {
-      "moderate": 0.50,
-      "warm": 0.30,
-      "cold": 0.20
-    },
-    "beverage": {
-      "tea": 0.60,
-      "coffee": 0.30,
-      "beer": 0.06,
-      "other": 0.04
-    },
-    "transport": {
-      "car": 0.65,
-      "publicTransit": 0.20,
-      "walk": 0.10,
-      "bike": 0.05
-    },
-    "workStyle": {
-      "office": 0.50,
-      "hybrid": 0.30,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "house": 0.55,
-      "apartment": 0.35,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "JP": {
-    "food": {
-      "noodles": 0.35,
-      "sushi": 0.25,
-      "rice": 0.20,
-      "curry": 0.08,
-      "pizza": 0.05,
-      "burgers": 0.04,
-      "other": 0.03
-    },
-    "sports": {
-      "baseball": 0.35,
-      "soccer": 0.25,
-      "sumo": 0.15,
-      "basketball": 0.10,
-      "volleyball": 0.08,
-      "other": 0.07
-    },
-    "climate": {
-      "moderate": 0.50,
-      "warm": 0.30,
-      "cold": 0.20
-    },
-    "beverage": {
-      "tea": 0.60,
-      "coffee": 0.25,
-      "sake": 0.10,
-      "other": 0.05
-    },
-    "transport": {
-      "publicTransit": 0.60,
-      "car": 0.25,
-      "bike": 0.10,
-      "walk": 0.05
-    },
-    "workStyle": {
-      "office": 0.70,
-      "hybrid": 0.15,
-      "remote": 0.10,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "apartment": 0.55,
-      "house": 0.35,
-      "condo": 0.08,
-      "other": 0.02
-    }
-  },
-  "CN": {
-    "food": {
-      "noodles": 0.40,
-      "rice": 0.30,
-      "dumplings": 0.15,
-      "stirFry": 0.08,
-      "pizza": 0.03,
-      "burgers": 0.02,
-      "other": 0.02
-    },
-    "sports": {
-      "tableTennis": 0.30,
-      "basketball": 0.25,
-      "badminton": 0.20,
-      "soccer": 0.15,
-      "volleyball": 0.06,
-      "other": 0.04
-    },
-    "climate": {
-      "moderate": 0.45,
-      "warm": 0.35,
-      "cold": 0.20
-    },
-    "beverage": {
-      "tea": 0.70,
-      "coffee": 0.15,
-      "milk": 0.08,
-      "other": 0.07
-    },
-    "transport": {
-      "publicTransit": 0.45,
-      "bike": 0.25,
-      "car": 0.20,
-      "walk": 0.10
-    },
-    "workStyle": {
-      "office": 0.65,
-      "hybrid": 0.15,
-      "remote": 0.10,
-      "outdoor": 0.10
-    },
-    "housing": {
-      "apartment": 0.70,
-      "house": 0.20,
-      "condo": 0.08,
-      "other": 0.02
-    }
-  },
-  "IN": {
-    "food": {
-      "curry": 0.50,
-      "rice": 0.20,
-      "bread": 0.15,
-      "biryani": 0.08,
-      "pizza": 0.03,
-      "noodles": 0.02,
-      "other": 0.02
-    },
-    "sports": {
-      "cricket": 0.60,
-      "soccer": 0.15,
-      "badminton": 0.10,
-      "hockey": 0.08,
-      "kabaddi": 0.04,
-      "other": 0.03
-    },
-    "climate": {
-      "warm": 0.60,
-      "moderate": 0.30,
-      "cold": 0.10
-    },
-    "beverage": {
-      "tea": 0.70,
-      "coffee": 0.15,
-      "milk": 0.10,
-      "other": 0.05
-    },
-    "transport": {
-      "publicTransit": 0.40,
-      "bike": 0.25,
-      "car": 0.20,
-      "walk": 0.15
-    },
-    "workStyle": {
-      "office": 0.60,
-      "remote": 0.20,
-      "hybrid": 0.10,
-      "outdoor": 0.10
-    },
-    "housing": {
-      "apartment": 0.50,
-      "house": 0.40,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "NL": {
-    "food": {
-      "cheese": 0.25,
-      "pizza": 0.20,
-      "pasta": 0.18,
-      "burgers": 0.15,
-      "fries": 0.10,
-      "noodles": 0.06,
-      "other": 0.06
-    },
-    "sports": {
-      "soccer": 0.50,
-      "cycling": 0.20,
-      "hockey": 0.12,
-      "volleyball": 0.08,
-      "tennis": 0.06,
-      "other": 0.04
-    },
-    "climate": {
-      "moderate": 0.55,
-      "warm": 0.30,
-      "cold": 0.15
-    },
-    "beverage": {
-      "coffee": 0.70,
-      "tea": 0.15,
-      "milk": 0.10,
-      "other": 0.05
-    },
-    "transport": {
-      "bike": 0.50,
-      "car": 0.30,
-      "publicTransit": 0.15,
-      "walk": 0.05
-    },
-    "workStyle": {
-      "office": 0.45,
-      "hybrid": 0.35,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "house": 0.55,
-      "apartment": 0.35,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "DE": {
-    "food": {
-      "pizza": 0.22,
-      "pasta": 0.20,
-      "burgers": 0.18,
-      "sausage": 0.15,
-      "curry": 0.10,
-      "noodles": 0.08,
-      "other": 0.07
-    },
-    "sports": {
-      "soccer": 0.55,
-      "handball": 0.15,
-      "basketball": 0.10,
-      "tennis": 0.10,
-      "volleyball": 0.06,
-      "other": 0.04
-    },
-    "climate": {
-      "moderate": 0.50,
-      "warm": 0.30,
-      "cold": 0.20
-    },
-    "beverage": {
-      "coffee": 0.65,
-      "tea": 0.20,
-      "beer": 0.10,
-      "other": 0.05
-    },
-    "transport": {
-      "car": 0.60,
-      "publicTransit": 0.25,
-      "bike": 0.10,
-      "walk": 0.05
-    },
-    "workStyle": {
-      "office": 0.55,
-      "hybrid": 0.25,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "apartment": 0.50,
-      "house": 0.40,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "FR": {
-    "food": {
-      "pasta": 0.25,
-      "pizza": 0.22,
-      "cheese": 0.18,
-      "burgers": 0.12,
-      "croissant": 0.10,
-      "curry": 0.06,
-      "other": 0.07
-    },
-    "sports": {
-      "soccer": 0.45,
-      "tennis": 0.20,
-      "rugby": 0.15,
-      "basketball": 0.10,
-      "cycling": 0.06,
-      "other": 0.04
-    },
-    "climate": {
-      "moderate": 0.50,
-      "warm": 0.35,
-      "cold": 0.15
-    },
-    "beverage": {
-      "coffee": 0.60,
-      "wine": 0.20,
-      "tea": 0.12,
-      "other": 0.08
-    },
-    "transport": {
-      "car": 0.65,
-      "publicTransit": 0.20,
-      "bike": 0.08,
-      "walk": 0.07
-    },
-    "workStyle": {
-      "office": 0.55,
-      "hybrid": 0.25,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "apartment": 0.50,
-      "house": 0.40,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "IT": {
-    "food": {
-      "pasta": 0.40,
-      "pizza": 0.35,
-      "risotto": 0.10,
-      "burgers": 0.06,
-      "noodles": 0.04,
-      "curry": 0.03,
-      "other": 0.02
-    },
-    "sports": {
-      "soccer": 0.60,
-      "volleyball": 0.15,
-      "basketball": 0.10,
-      "tennis": 0.08,
-      "cycling": 0.04,
-      "other": 0.03
-    },
-    "climate": {
-      "warm": 0.50,
-      "moderate": 0.35,
-      "cold": 0.15
-    },
-    "beverage": {
-      "coffee": 0.75,
-      "wine": 0.12,
-      "tea": 0.08,
-      "other": 0.05
-    },
-    "transport": {
-      "car": 0.70,
-      "publicTransit": 0.15,
-      "bike": 0.08,
-      "walk": 0.07
-    },
-    "workStyle": {
-      "office": 0.60,
-      "hybrid": 0.20,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "apartment": 0.55,
-      "house": 0.35,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "ES": {
-    "food": {
-      "paella": 0.25,
-      "pizza": 0.22,
-      "pasta": 0.20,
-      "tapas": 0.15,
-      "burgers": 0.08,
-      "curry": 0.05,
-      "other": 0.05
-    },
-    "sports": {
-      "soccer": 0.65,
-      "basketball": 0.15,
-      "tennis": 0.10,
-      "cycling": 0.05,
-      "volleyball": 0.03,
-      "other": 0.02
-    },
-    "climate": {
-      "warm": 0.60,
-      "moderate": 0.30,
-      "cold": 0.10
-    },
-    "beverage": {
-      "coffee": 0.60,
-      "wine": 0.20,
-      "tea": 0.12,
-      "other": 0.08
-    },
-    "transport": {
-      "car": 0.65,
-      "publicTransit": 0.20,
-      "walk": 0.10,
-      "bike": 0.05
-    },
-    "workStyle": {
-      "office": 0.60,
-      "hybrid": 0.20,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "apartment": 0.60,
-      "house": 0.30,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "CA": {
-    "food": {
-      "pizza": 0.25,
-      "burgers": 0.22,
-      "pasta": 0.15,
-      "tacos": 0.12,
-      "poutine": 0.10,
-      "sushi": 0.08,
-      "other": 0.08
-    },
-    "sports": {
-      "hockey": 0.40,
-      "soccer": 0.20,
-      "basketball": 0.15,
-      "football": 0.12,
-      "baseball": 0.08,
-      "other": 0.05
-    },
-    "climate": {
-      "moderate": 0.40,
-      "cold": 0.35,
-      "warm": 0.25
-    },
-    "beverage": {
-      "coffee": 0.70,
-      "tea": 0.18,
-      "beer": 0.07,
-      "other": 0.05
-    },
-    "transport": {
-      "car": 0.80,
-      "publicTransit": 0.12,
-      "bike": 0.05,
-      "walk": 0.03
-    },
-    "workStyle": {
-      "office": 0.50,
-      "hybrid": 0.25,
-      "remote": 0.20,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "house": 0.60,
-      "apartment": 0.30,
-      "condo": 0.08,
-      "other": 0.02
-    }
-  },
-  "AU": {
-    "food": {
-      "pizza": 0.25,
-      "burgers": 0.22,
-      "pasta": 0.18,
-      "sushi": 0.12,
-      "curry": 0.10,
-      "tacos": 0.06,
-      "other": 0.07
-    },
-    "sports": {
-      "cricket": 0.30,
-      "rugby": 0.25,
-      "soccer": 0.20,
-      "tennis": 0.12,
-      "swimming": 0.08,
-      "other": 0.05
-    },
-    "climate": {
-      "warm": 0.55,
-      "moderate": 0.35,
-      "cold": 0.10
-    },
-    "beverage": {
-      "coffee": 0.65,
-      "tea": 0.20,
-      "beer": 0.10,
-      "other": 0.05
-    },
-    "transport": {
-      "car": 0.80,
-      "publicTransit": 0.12,
-      "bike": 0.05,
-      "walk": 0.03
-    },
-    "workStyle": {
-      "office": 0.50,
-      "hybrid": 0.25,
-      "remote": 0.20,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "house": 0.70,
-      "apartment": 0.22,
-      "flat": 0.06,
-      "other": 0.02
-    }
-  },
-  "MX": {
-    "food": {
-      "tacos": 0.45,
-      "burgers": 0.15,
       "pizza": 0.12,
-      "tortas": 0.10,
-      "tamales": 0.08,
-      "pasta": 0.05,
-      "other": 0.05
-    },
-    "sports": {
-      "soccer": 0.70,
-      "boxing": 0.12,
-      "baseball": 0.08,
-      "basketball": 0.05,
-      "lucha": 0.03,
-      "other": 0.02
-    },
-    "climate": {
-      "warm": 0.60,
-      "moderate": 0.30,
-      "cold": 0.10
-    },
-    "beverage": {
-      "coffee": 0.50,
-      "soda": 0.25,
-      "juice": 0.15,
-      "tea": 0.10
-    },
-    "transport": {
-      "car": 0.50,
-      "publicTransit": 0.30,
-      "walk": 0.15,
-      "bike": 0.05
-    },
-    "workStyle": {
-      "office": 0.55,
-      "outdoor": 0.20,
-      "remote": 0.15,
-      "hybrid": 0.10
-    },
-    "housing": {
-      "house": 0.60,
-      "apartment": 0.30,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "BR": {
-    "food": {
-      "rice": 0.30,
-      "pizza": 0.20,
-      "burgers": 0.15,
+      "burger": 0.10,
+      "sushi": 0.06,
       "pasta": 0.12,
-      "feijoada": 0.10,
-      "tacos": 0.06,
-      "other": 0.07
+      "tacos": 0.05,
+      "curry": 0.20,
+      "steak": 0.10,
+      "ramen": 0.05,
+      "bbq": 0.08,
+      "fish_chips": 0.12
     },
     "sports": {
-      "soccer": 0.75,
-      "volleyball": 0.10,
-      "basketball": 0.06,
-      "jujitsu": 0.04,
-      "tennis": 0.03,
-      "other": 0.02
-    },
-    "climate": {
-      "warm": 0.70,
-      "moderate": 0.25,
-      "cold": 0.05
-    },
-    "beverage": {
-      "coffee": 0.60,
-      "juice": 0.20,
-      "soda": 0.12,
-      "tea": 0.08
-    },
-    "transport": {
-      "car": 0.50,
-      "publicTransit": 0.30,
-      "walk": 0.12,
-      "bike": 0.08
-    },
-    "workStyle": {
-      "office": 0.55,
-      "remote": 0.20,
-      "hybrid": 0.15,
-      "outdoor": 0.10
-    },
-    "housing": {
-      "apartment": 0.50,
-      "house": 0.40,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "KR": {
-    "food": {
-      "noodles": 0.30,
-      "rice": 0.25,
-      "kimchi": 0.20,
-      "bbq": 0.12,
-      "pizza": 0.06,
-      "burgers": 0.04,
-      "other": 0.03
-    },
-    "sports": {
-      "soccer": 0.35,
-      "baseball": 0.30,
-      "basketball": 0.15,
-      "taekwondo": 0.10,
-      "volleyball": 0.06,
-      "other": 0.04
-    },
-    "climate": {
-      "moderate": 0.50,
-      "warm": 0.30,
-      "cold": 0.20
-    },
-    "beverage": {
-      "coffee": 0.55,
-      "tea": 0.25,
-      "soju": 0.12,
-      "other": 0.08
-    },
-    "transport": {
-      "publicTransit": 0.55,
-      "car": 0.30,
-      "walk": 0.10,
-      "bike": 0.05
-    },
-    "workStyle": {
-      "office": 0.70,
-      "hybrid": 0.15,
-      "remote": 0.10,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "apartment": 0.65,
-      "house": 0.25,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "SE": {
-    "food": {
-      "pizza": 0.25,
-      "pasta": 0.20,
-      "burgers": 0.18,
-      "meatballs": 0.15,
-      "fish": 0.10,
-      "curry": 0.06,
-      "other": 0.06
-    },
-    "sports": {
-      "soccer": 0.40,
-      "hockey": 0.30,
-      "skiing": 0.15,
-      "handball": 0.08,
-      "tennis": 0.04,
-      "other": 0.03
-    },
-    "climate": {
-      "cold": 0.45,
-      "moderate": 0.40,
-      "warm": 0.15
-    },
-    "beverage": {
-      "coffee": 0.80,
-      "tea": 0.12,
-      "milk": 0.05,
-      "other": 0.03
-    },
-    "transport": {
-      "car": 0.60,
-      "publicTransit": 0.20,
-      "bike": 0.15,
-      "walk": 0.05
-    },
-    "workStyle": {
-      "office": 0.45,
-      "hybrid": 0.35,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "apartment": 0.50,
-      "house": 0.40,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "NO": {
-    "food": {
-      "pizza": 0.25,
-      "pasta": 0.20,
-      "burgers": 0.18,
-      "fish": 0.15,
-      "meatballs": 0.10,
-      "curry": 0.06,
-      "other": 0.06
-    },
-    "sports": {
-      "soccer": 0.35,
-      "skiing": 0.30,
-      "handball": 0.15,
-      "hockey": 0.10,
-      "cycling": 0.06,
-      "other": 0.04
-    },
-    "climate": {
-      "cold": 0.50,
-      "moderate": 0.35,
-      "warm": 0.15
-    },
-    "beverage": {
-      "coffee": 0.75,
-      "tea": 0.15,
-      "milk": 0.06,
-      "other": 0.04
-    },
-    "transport": {
-      "car": 0.65,
-      "publicTransit": 0.18,
-      "bike": 0.12,
-      "walk": 0.05
-    },
-    "workStyle": {
-      "office": 0.45,
-      "hybrid": 0.35,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "house": 0.55,
-      "apartment": 0.35,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "DK": {
-    "food": {
-      "pizza": 0.25,
-      "pasta": 0.20,
-      "burgers": 0.18,
-      "openSandwich": 0.15,
-      "fish": 0.10,
-      "curry": 0.06,
-      "other": 0.06
-    },
-    "sports": {
+      "football": 0.10,
+      "basketball": 0.05,
+      "baseball": 0.02,
       "soccer": 0.45,
-      "handball": 0.25,
-      "cycling": 0.15,
-      "badminton": 0.08,
-      "swimming": 0.04,
-      "other": 0.03
+      "hockey": 0.05,
+      "cricket": 0.20,
+      "rugby": 0.13
     },
     "climate": {
-      "moderate": 0.50,
       "cold": 0.30,
-      "warm": 0.20
+      "temperate": 0.60,
+      "hot": 0.10
     },
     "beverage": {
-      "coffee": 0.75,
-      "tea": 0.15,
-      "beer": 0.06,
-      "other": 0.04
-    },
-    "transport": {
-      "bike": 0.45,
-      "car": 0.35,
-      "publicTransit": 0.15,
-      "walk": 0.05
-    },
-    "workStyle": {
-      "office": 0.45,
-      "hybrid": 0.35,
-      "remote": 0.15,
-      "outdoor": 0.05
-    },
-    "housing": {
-      "house": 0.50,
-      "apartment": 0.40,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "TH": {
-    "food": {
-      "noodles": 0.40,
-      "rice": 0.30,
-      "curry": 0.15,
-      "stirFry": 0.08,
-      "pizza": 0.03,
-      "burgers": 0.02,
-      "other": 0.02
-    },
-    "sports": {
-      "soccer": 0.40,
-      "muayThai": 0.25,
-      "volleyball": 0.15,
-      "badminton": 0.10,
-      "basketball": 0.06,
-      "other": 0.04
-    },
-    "climate": {
-      "warm": 0.70,
-      "moderate": 0.25,
-      "cold": 0.05
-    },
-    "beverage": {
-      "tea": 0.50,
-      "coffee": 0.30,
-      "juice": 0.12,
-      "other": 0.08
-    },
-    "transport": {
-      "bike": 0.40,
-      "car": 0.30,
-      "publicTransit": 0.20,
-      "walk": 0.10
-    },
-    "workStyle": {
-      "office": 0.60,
-      "outdoor": 0.20,
-      "remote": 0.12,
-      "hybrid": 0.08
-    },
-    "housing": {
-      "house": 0.55,
-      "apartment": 0.35,
-      "flat": 0.08,
-      "other": 0.02
-    }
-  },
-  "AR": {
-    "food": {
-      "asado": 0.30,
-      "pizza": 0.25,
-      "pasta": 0.20,
-      "empanadas": 0.12,
-      "burgers": 0.06,
-      "tacos": 0.04,
-      "other": 0.03
-    },
-    "sports": {
-      "soccer": 0.75,
-      "rugby": 0.10,
-      "basketball": 0.06,
-      "tennis": 0.05,
-      "polo": 0.02,
-      "other": 0.02
-    },
-    "climate": {
-      "moderate": 0.50,
-      "warm": 0.35,
-      "cold": 0.15
-    },
-    "beverage": {
-      "mate": 0.40,
       "coffee": 0.35,
-      "wine": 0.15,
+      "tea": 0.55,
       "other": 0.10
     },
     "transport": {
       "car": 0.55,
-      "publicTransit": 0.30,
-      "walk": 0.10,
-      "bike": 0.05
+      "bicycle": 0.05,
+      "publicTransport": 0.25,
+      "walk": 0.15
     },
     "workStyle": {
       "office": 0.55,
-      "remote": 0.20,
-      "hybrid": 0.15,
-      "outdoor": 0.10
+      "remote": 0.25,
+      "hybrid": 0.20
     },
     "housing": {
+      "house": 0.55,
+      "apartment": 0.40,
+      "other": 0.05
+    }
+  },
+  "JP": {
+    "food": {
+      "pizza": 0.08,
+      "burger": 0.08,
+      "sushi": 0.30,
+      "pasta": 0.08,
+      "tacos": 0.03,
+      "curry": 0.12,
+      "steak": 0.08,
+      "ramen": 0.20,
+      "bbq": 0.03
+    },
+    "sports": {
+      "football": 0.05,
+      "basketball": 0.10,
+      "baseball": 0.35,
+      "soccer": 0.25,
+      "hockey": 0.03,
+      "cricket": 0.02,
+      "rugby": 0.05,
+      "sumo": 0.15
+    },
+    "climate": {
+      "cold": 0.25,
+      "temperate": 0.60,
+      "hot": 0.15
+    },
+    "beverage": {
+      "coffee": 0.45,
+      "tea": 0.45,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.30,
+      "bicycle": 0.15,
+      "publicTransport": 0.45,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.75,
+      "remote": 0.10,
+      "hybrid": 0.15
+    },
+    "housing": {
+      "house": 0.40,
       "apartment": 0.55,
-      "house": 0.35,
-      "flat": 0.08,
-      "other": 0.02
+      "other": 0.05
+    }
+  },
+  "CN": {
+    "food": {
+      "pizza": 0.05,
+      "burger": 0.05,
+      "sushi": 0.05,
+      "pasta": 0.05,
+      "tacos": 0.02,
+      "curry": 0.08,
+      "steak": 0.05,
+      "ramen": 0.10,
+      "bbq": 0.05,
+      "dumplings": 0.25,
+      "noodles": 0.25
+    },
+    "sports": {
+      "football": 0.05,
+      "basketball": 0.30,
+      "baseball": 0.05,
+      "soccer": 0.25,
+      "hockey": 0.05,
+      "cricket": 0.02,
+      "rugby": 0.03,
+      "table_tennis": 0.25
+    },
+    "climate": {
+      "cold": 0.20,
+      "temperate": 0.50,
+      "hot": 0.30
+    },
+    "beverage": {
+      "coffee": 0.20,
+      "tea": 0.70,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.25,
+      "bicycle": 0.30,
+      "publicTransport": 0.35,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.70,
+      "remote": 0.15,
+      "hybrid": 0.15
+    },
+    "housing": {
+      "house": 0.30,
+      "apartment": 0.65,
+      "other": 0.05
+    }
+  },
+  "IN": {
+    "food": {
+      "pizza": 0.08,
+      "burger": 0.08,
+      "sushi": 0.03,
+      "pasta": 0.08,
+      "tacos": 0.03,
+      "curry": 0.40,
+      "steak": 0.05,
+      "ramen": 0.05,
+      "bbq": 0.05,
+      "biryani": 0.15
+    },
+    "sports": {
+      "football": 0.05,
+      "basketball": 0.05,
+      "baseball": 0.02,
+      "soccer": 0.15,
+      "hockey": 0.10,
+      "cricket": 0.55,
+      "rugby": 0.03,
+      "kabaddi": 0.05
+    },
+    "climate": {
+      "cold": 0.10,
+      "temperate": 0.30,
+      "hot": 0.60
+    },
+    "beverage": {
+      "coffee": 0.30,
+      "tea": 0.60,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.20,
+      "bicycle": 0.15,
+      "publicTransport": 0.40,
+      "walk": 0.15,
+      "motorcycle": 0.10
+    },
+    "workStyle": {
+      "office": 0.65,
+      "remote": 0.20,
+      "hybrid": 0.15
+    },
+    "housing": {
+      "house": 0.45,
+      "apartment": 0.50,
+      "other": 0.05
+    }
+  },
+  "NL": {
+    "food": {
+      "pizza": 0.12,
+      "burger": 0.10,
+      "sushi": 0.08,
+      "pasta": 0.12,
+      "tacos": 0.08,
+      "curry": 0.10,
+      "steak": 0.12,
+      "ramen": 0.06,
+      "bbq": 0.08,
+      "cheese": 0.14
+    },
+    "sports": {
+      "football": 0.08,
+      "basketball": 0.08,
+      "baseball": 0.03,
+      "soccer": 0.50,
+      "hockey": 0.15,
+      "cricket": 0.05,
+      "rugby": 0.06,
+      "cycling": 0.05
+    },
+    "climate": {
+      "cold": 0.40,
+      "temperate": 0.55,
+      "hot": 0.05
+    },
+    "beverage": {
+      "coffee": 0.70,
+      "tea": 0.20,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.40,
+      "bicycle": 0.35,
+      "publicTransport": 0.15,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.50,
+      "remote": 0.30,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.60,
+      "apartment": 0.35,
+      "other": 0.05
+    }
+  },
+  "DE": {
+    "food": {
+      "pizza": 0.12,
+      "burger": 0.10,
+      "sushi": 0.08,
+      "pasta": 0.12,
+      "tacos": 0.06,
+      "curry": 0.10,
+      "steak": 0.12,
+      "ramen": 0.06,
+      "bbq": 0.10,
+      "sausage": 0.14
+    },
+    "sports": {
+      "football": 0.10,
+      "basketball": 0.10,
+      "baseball": 0.03,
+      "soccer": 0.50,
+      "hockey": 0.08,
+      "cricket": 0.03,
+      "rugby": 0.06,
+      "handball": 0.10
+    },
+    "climate": {
+      "cold": 0.35,
+      "temperate": 0.60,
+      "hot": 0.05
+    },
+    "beverage": {
+      "coffee": 0.65,
+      "tea": 0.25,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.55,
+      "bicycle": 0.15,
+      "publicTransport": 0.20,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.60,
+      "remote": 0.25,
+      "hybrid": 0.15
+    },
+    "housing": {
+      "house": 0.50,
+      "apartment": 0.45,
+      "other": 0.05
+    }
+  },
+  "FR": {
+    "food": {
+      "pizza": 0.12,
+      "burger": 0.10,
+      "sushi": 0.08,
+      "pasta": 0.14,
+      "tacos": 0.06,
+      "curry": 0.08,
+      "steak": 0.14,
+      "ramen": 0.06,
+      "bbq": 0.08,
+      "croissant": 0.14
+    },
+    "sports": {
+      "football": 0.08,
+      "basketball": 0.10,
+      "baseball": 0.02,
+      "soccer": 0.45,
+      "hockey": 0.05,
+      "cricket": 0.03,
+      "rugby": 0.15,
+      "cycling": 0.12
+    },
+    "climate": {
+      "cold": 0.25,
+      "temperate": 0.65,
+      "hot": 0.10
+    },
+    "beverage": {
+      "coffee": 0.60,
+      "tea": 0.30,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.60,
+      "bicycle": 0.08,
+      "publicTransport": 0.20,
+      "walk": 0.12
+    },
+    "workStyle": {
+      "office": 0.55,
+      "remote": 0.25,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.55,
+      "apartment": 0.40,
+      "other": 0.05
+    }
+  },
+  "IT": {
+    "food": {
+      "pizza": 0.20,
+      "burger": 0.08,
+      "sushi": 0.06,
+      "pasta": 0.25,
+      "tacos": 0.05,
+      "curry": 0.06,
+      "steak": 0.12,
+      "ramen": 0.05,
+      "bbq": 0.08,
+      "gelato": 0.05
+    },
+    "sports": {
+      "football": 0.08,
+      "basketball": 0.10,
+      "baseball": 0.02,
+      "soccer": 0.60,
+      "hockey": 0.03,
+      "cricket": 0.02,
+      "rugby": 0.05,
+      "cycling": 0.10
+    },
+    "climate": {
+      "cold": 0.15,
+      "temperate": 0.60,
+      "hot": 0.25
+    },
+    "beverage": {
+      "coffee": 0.70,
+      "tea": 0.20,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.65,
+      "bicycle": 0.08,
+      "publicTransport": 0.15,
+      "walk": 0.12
+    },
+    "workStyle": {
+      "office": 0.60,
+      "remote": 0.20,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.50,
+      "apartment": 0.45,
+      "other": 0.05
+    }
+  },
+  "ES": {
+    "food": {
+      "pizza": 0.12,
+      "burger": 0.08,
+      "sushi": 0.06,
+      "pasta": 0.14,
+      "tacos": 0.08,
+      "curry": 0.06,
+      "steak": 0.12,
+      "ramen": 0.05,
+      "bbq": 0.08,
+      "paella": 0.15,
+      "tapas": 0.06
+    },
+    "sports": {
+      "football": 0.08,
+      "basketball": 0.12,
+      "baseball": 0.02,
+      "soccer": 0.55,
+      "hockey": 0.03,
+      "cricket": 0.02,
+      "rugby": 0.05,
+      "tennis": 0.13
+    },
+    "climate": {
+      "cold": 0.10,
+      "temperate": 0.50,
+      "hot": 0.40
+    },
+    "beverage": {
+      "coffee": 0.60,
+      "tea": 0.25,
+      "other": 0.15
+    },
+    "transport": {
+      "car": 0.65,
+      "bicycle": 0.05,
+      "publicTransport": 0.18,
+      "walk": 0.12
+    },
+    "workStyle": {
+      "office": 0.60,
+      "remote": 0.20,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.45,
+      "apartment": 0.50,
+      "other": 0.05
+    }
+  },
+  "CA": {
+    "food": {
+      "pizza": 0.14,
+      "burger": 0.18,
+      "sushi": 0.10,
+      "pasta": 0.12,
+      "tacos": 0.12,
+      "curry": 0.08,
+      "steak": 0.12,
+      "ramen": 0.06,
+      "bbq": 0.08
+    },
+    "sports": {
+      "football": 0.15,
+      "basketball": 0.15,
+      "baseball": 0.12,
+      "soccer": 0.15,
+      "hockey": 0.35,
+      "cricket": 0.03,
+      "rugby": 0.05
+    },
+    "climate": {
+      "cold": 0.45,
+      "temperate": 0.45,
+      "hot": 0.10
+    },
+    "beverage": {
+      "coffee": 0.65,
+      "tea": 0.25,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.75,
+      "bicycle": 0.03,
+      "publicTransport": 0.12,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.55,
+      "remote": 0.30,
+      "hybrid": 0.15
+    },
+    "housing": {
+      "house": 0.65,
+      "apartment": 0.30,
+      "other": 0.05
+    }
+  },
+  "AU": {
+    "food": {
+      "pizza": 0.14,
+      "burger": 0.16,
+      "sushi": 0.10,
+      "pasta": 0.12,
+      "tacos": 0.10,
+      "curry": 0.10,
+      "steak": 0.14,
+      "ramen": 0.06,
+      "bbq": 0.08
+    },
+    "sports": {
+      "football": 0.25,
+      "basketball": 0.10,
+      "baseball": 0.05,
+      "soccer": 0.20,
+      "hockey": 0.05,
+      "cricket": 0.25,
+      "rugby": 0.10
+    },
+    "climate": {
+      "cold": 0.10,
+      "temperate": 0.40,
+      "hot": 0.50
+    },
+    "beverage": {
+      "coffee": 0.65,
+      "tea": 0.25,
+      "other":0.10
+    },
+    "transport": {
+      "car": 0.75,
+      "bicycle": 0.05,
+      "publicTransport": 0.12,
+      "walk": 0.08
+    },
+    "workStyle": {
+      "office": 0.55,
+      "remote": 0.25,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.70,
+      "apartment": 0.25,
+      "other": 0.05
+    }
+  },
+  "MX": {
+    "food": {
+      "pizza": 0.10,
+      "burger": 0.12,
+      "sushi": 0.05,
+      "pasta": 0.10,
+      "tacos": 0.30,
+      "curry": 0.05,
+      "steak": 0.10,
+      "ramen": 0.05,
+      "bbq": 0.08,
+      "enchiladas": 0.05
+    },
+    "sports": {
+      "football": 0.15,
+      "basketball": 0.15,
+      "baseball": 0.20,
+      "soccer": 0.40,
+      "hockey": 0.02,
+      "cricket": 0.01,
+      "rugby": 0.02,
+      "boxing": 0.05
+    },
+    "climate": {
+      "cold": 0.05,
+      "temperate": 0.35,
+      "hot": 0.60
+    },
+    "beverage": {
+      "coffee": 0.50,
+      "tea": 0.20,
+      "other": 0.30
+    },
+    "transport": {
+      "car": 0.60,
+      "bicycle": 0.05,
+      "publicTransport": 0.25,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.65,
+      "remote": 0.15,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.60,
+      "apartment": 0.35,
+      "other": 0.05
+    }
+  },
+  "BR": {
+    "food": {
+      "pizza": 0.12,
+      "burger": 0.12,
+      "sushi": 0.06,
+      "pasta": 0.12,
+      "tacos": 0.08,
+      "curry": 0.05,
+      "steak": 0.15,
+      "ramen": 0.05,
+      "bbq": 0.15,
+      "feijoada": 0.10
+    },
+    "sports": {
+      "football": 0.15,
+      "basketball": 0.10,
+      "baseball": 0.05,
+      "soccer": 0.60,
+      "hockey": 0.02,
+      "cricket": 0.01,
+      "rugby": 0.02,
+      "volleyball": 0.05
+    },
+    "climate": {
+      "cold": 0.05,
+      "temperate": 0.25,
+      "hot": 0.70
+    },
+    "beverage": {
+      "coffee": 0.70,
+      "tea": 0.15,
+      "other": 0.15
+    },
+    "transport": {
+      "car": 0.55,
+      "bicycle": 0.05,
+      "publicTransport": 0.30,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.65,
+      "remote": 0.15,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.50,
+      "apartment": 0.45,
+      "other": 0.05
+    }
+  },
+  "KR": {
+    "food": {
+      "pizza": 0.08,
+      "burger": 0.08,
+      "sushi": 0.10,
+      "pasta": 0.08,
+      "tacos": 0.05,
+      "curry": 0.08,
+      "steak": 0.08,
+      "ramen": 0.15,
+      "bbq": 0.15,
+      "kimchi": 0.15
+    },
+    "sports": {
+      "football": 0.10,
+      "basketball": 0.15,
+      "baseball": 0.25,
+      "soccer": 0.30,
+      "hockey": 0.05,
+      "cricket": 0.02,
+      "rugby": 0.03,
+      "taekwondo": 0.10
+    },
+    "climate": {
+      "cold": 0.30,
+      "temperate": 0.60,
+      "hot": 0.10
+    },
+    "beverage": {
+      "coffee": 0.60,
+      "tea": 0.30,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.40,
+      "bicycle": 0.05,
+      "publicTransport": 0.45,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.75,
+      "remote": 0.10,
+      "hybrid": 0.15
+    },
+    "housing": {
+      "house": 0.30,
+      "apartment": 0.65,
+      "other": 0.05
+    }
+  },
+  "SE": {
+    "food": {
+      "pizza": 0.12,
+      "burger": 0.10,
+      "sushi": 0.10,
+      "pasta": 0.12,
+      "tacos": 0.08,
+      "curry": 0.08,
+      "steak": 0.12,
+      "ramen": 0.06,
+      "bbq": 0.08,
+      "meatballs": 0.14
+    },
+    "sports": {
+      "football": 0.08,
+      "basketball": 0.08,
+      "baseball": 0.02,
+      "soccer": 0.40,
+      "hockey": 0.30,
+      "cricket": 0.02,
+      "rugby": 0.05,
+      "skiing": 0.05
+    },
+    "climate": {
+      "cold": 0.60,
+      "temperate": 0.35,
+      "hot": 0.05
+    },
+    "beverage": {
+      "coffee": 0.80,
+      "tea": 0.15,
+      "other": 0.05
+    },
+    "transport": {
+      "car": 0.50,
+      "bicycle": 0.15,
+      "publicTransport": 0.25,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.45,
+      "remote": 0.35,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.60,
+      "apartment": 0.35,
+      "other": 0.05
+    }
+  },
+  "NO": {
+    "food": {
+      "pizza": 0.12,
+      "burger": 0.10,
+      "sushi": 0.10,
+      "pasta": 0.12,
+      "tacos": 0.08,
+      "curry": 0.08,
+      "steak": 0.12,
+      "ramen": 0.06,
+      "bbq": 0.08,
+      "salmon": 0.14
+    },
+    "sports": {
+      "football": 0.08,
+      "basketball": 0.05,
+      "baseball": 0.02,
+      "soccer": 0.35,
+      "hockey": 0.25,
+      "cricket": 0.02,
+      "rugby": 0.05,
+      "skiing": 0.18
+    },
+    "climate": {
+      "cold": 0.70,
+      "temperate": 0.25,
+      "hot": 0.05
+    },
+    "beverage": {
+      "coffee": 0.85,
+      "tea": 0.10,
+      "other": 0.05
+    },
+    "transport": {
+      "car": 0.55,
+      "bicycle": 0.10,
+      "publicTransport": 0.25,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.45,
+      "remote": 0.35,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.65,
+      "apartment": 0.30,
+      "other": 0.05
+    }
+  },
+  "DK": {
+    "food": {
+      "pizza": 0.12,
+      "burger": 0.10,
+      "sushi": 0.10,
+      "pasta": 0.12,
+      "tacos": 0.08,
+      "curry": 0.08,
+      "steak": 0.12,
+      "ramen": 0.06,
+      "bbq": 0.08,
+      "pastry": 0.14
+    },
+    "sports": {
+      "football": 0.08,
+      "basketball": 0.08,
+      "baseball": 0.02,
+      "soccer": 0.45,
+      "hockey": 0.15,
+      "cricket": 0.02,
+      "rugby": 0.05,
+      "cycling": 0.15
+    },
+    "climate": {
+      "cold": 0.50,
+      "temperate": 0.45,
+      "hot": 0.05
+    },
+    "beverage": {
+      "coffee": 0.75,
+      "tea": 0.20,
+      "other": 0.05
+    },
+    "transport": {
+      "car": 0.45,
+      "bicycle": 0.30,
+      "publicTransport": 0.15,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.45,
+      "remote": 0.35,
+      "hybrid": 0.20
+    },
+    "housing": {
+      "house": 0.55,
+      "apartment": 0.40,
+      "other": 0.05
+    }
+  },
+  "TH": {
+    "food": {
+      "pizza": 0.08,
+      "burger": 0.08,
+      "sushi": 0.08,
+      "pasta": 0.08,
+      "tacos": 0.05,
+      "curry": 0.25,
+      "steak": 0.08,
+      "ramen": 0.10,
+      "bbq": 0.08,
+      "pad_thai": 0.12
+    },
+    "sports": {
+      "football": 0.10,
+      "basketball": 0.15,
+      "baseball": 0.05,
+      "soccer": 0.40,
+      "hockey": 0.02,
+      "cricket": 0.03,
+      "rugby": 0.05,
+      "muay_thai": 0.20
+    },
+    "climate": {
+      "cold": 0.02,
+      "temperate": 0.18,
+      "hot": 0.80
+    },
+    "beverage": {
+      "coffee": 0.40,
+      "tea": 0.50,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.35,
+      "bicycle": 0.10,
+      "publicTransport": 0.25,
+      "walk": 0.10,
+      "motorcycle": 0.20
+    },
+    "workStyle": {
+      "office": 0.70,
+      "remote": 0.15,
+      "hybrid": 0.15
+    },
+    "housing": {
+      "house": 0.40,
+      "apartment": 0.55,
+      "other": 0.05
+    }
+  },
+  "AR": {
+    "food": {
+      "pizza": 0.14,
+      "burger": 0.12,
+      "sushi": 0.06,
+      "pasta": 0.14,
+      "tacos": 0.08,
+      "curry": 0.05,
+      "steak": 0.20,
+      "ramen": 0.05,
+      "bbq": 0.12,
+      "empanadas": 0.04
+    },
+    "sports": {
+      "football": 0.15,
+      "basketball": 0.10,
+      "baseball": 0.05,
+      "soccer": 0.60,
+      "hockey": 0.03,
+      "cricket": 0.02,
+      "rugby": 0.03,
+      "polo": 0.02
+    },
+    "climate": {
+      "cold": 0.15,
+      "temperate": 0.60,
+      "hot": 0.25
+    },
+    "beverage": {
+      "coffee": 0.50,
+      "tea": 0.40,
+      "other": 0.10
+    },
+    "transport": {
+      "car": 0.60,
+      "bicycle": 0.08,
+      "publicTransport": 0.22,
+      "walk": 0.10
+    },
+    "workStyle": {
+      "office": 0.65,
+      "remote": 0.20,
+      "hybrid": 0.15
+    },
+    "housing": {
+      "house": 0.55,
+      "apartment": 0.40,
+      "other": 0.05
     }
   }
 }
